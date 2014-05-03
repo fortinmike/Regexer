@@ -35,7 +35,7 @@ static RXRegexCache *_regexCache;
 
 - (NSRegularExpression *)rx_regexCaseSensitive:(BOOL)caseSensitive
 {
-	return [self rx_regexWithOptions:NSRegularExpressionCaseInsensitive];
+	return [self rx_regexWithOptions:(caseSensitive ? 0 : NSRegularExpressionCaseInsensitive)];
 }
 
 - (NSRegularExpression *)rx_regexWithOptions:(NSRegularExpressionOptions)options
