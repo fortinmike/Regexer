@@ -21,11 +21,11 @@
 - (BOOL)rx_matchesPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (BOOL)rx_matchesRegex:(NSRegularExpression *)regex;
 
-#pragma mark Extracting Strings with Groups
+#pragma mark Extracting Strings with Capture Groups
 
-- (NSString *)rx_matchedGroup:(NSInteger)group withPattern:(NSString *)regexPattern;
-- (NSString *)rx_matchedGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
-- (NSArray *)rx_matchedGroupsWithPattern:(NSString *)regexPattern;
-- (NSArray *)rx_matchedGroupsWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
+- (NSString *)rx_capture:(NSInteger)group withPattern:(NSString *)regexPattern;
+- (NSString *)rx_capture:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
+- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern;
+- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 
 @end
