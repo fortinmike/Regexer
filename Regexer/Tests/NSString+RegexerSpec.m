@@ -32,6 +32,19 @@ describe(@"NSString+Regexer", ^
 			[[theBlock(^{ [@"\\" rx_regex]; }) should] raise];
 		});
 	});
+	
+	context(@"matching", ^
+	{
+		it(@"should perform case sensitive pattern matching", ^
+		{
+			[[theValue([@"Hello World" rx_matchesPattern:@"^[a-z0-9 ]+?$"]) should] beNo];
+		});
+		
+		it(@"should perform case insensitive pattern matching", ^
+		{
+			[[theValue([@"Hello World" rx_matchesPattern:@"^[a-z0-9 ]+?$" caseSensitive:NO]) should] beYes];
+		});
+	});
 });
 
 SPEC_END
