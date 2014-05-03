@@ -33,6 +33,31 @@ describe(@"NSString+Regexer", ^
 		});
 	});
 	
+	context(@"caching", ^
+	{
+		it(@"should return the same regex instance if asked for the same pattern and options multiple times", ^
+		{
+			NSRegularExpression *regex1 = [@"ABC" rx_regex];
+			NSRegularExpression *regex2 = [@"ABC" rx_regex];
+			[[theValue(regex1 == regex2) should] beYes];
+		});
+		
+		it(@"should return different regex instances if asked for the same pattern but with different options", ^
+		{
+			NSRegularExpression *regex1 = [@"ABC" rx_regexWithOptions:NSRegularExpressionIgnoreMetacharacters];
+			NSRegularExpression *regex2 = [@"ABC" rx_regexWithOptions:NSRegularExpressionCaseInsensitive];
+			[[theValue(regex1 == regex2) should] beNo];
+		});
+		
+		it(@"should return a different regex instance after clearing the cache if asked for the exact same thing", ^
+		{
+			NSRegularExpression *regex1 = [@"ABC" rx_regex];
+			[[RXRegexCache sharedCache] clear];
+			NSRegularExpression *regex2 = [@"ABC" rx_regex];
+			[[theValue(regex1 == regex2) should] beNo];
+		});
+	});
+	
 	context(@"matching", ^
 	{
 		it(@"should perform case sensitive pattern matching", ^
