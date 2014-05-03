@@ -45,6 +45,29 @@ describe(@"NSString+Regexer", ^
 			[[theValue([@"Hello World" rx_matchesPattern:@"^[a-z0-9 ]+?$" caseSensitive:NO]) should] beYes];
 		});
 	});
+	
+	context(@"extracting groups", ^
+	{
+		it(@"should return an empty array when no groups are present in the pattern", ^
+		{
+			NSArray *groups = [@"What is your quest?" rx_matchedGroupsForPattern:@"\\b[a-zA-Z]+?\\b"];
+			[[theValue([groups count]) should] equal:theValue(0)];
+		});
+		
+		it(@"should return extracted groups when the pattern contains a single group", ^
+		{
+			NSArray *groups = [@"What is your quest?" rx_matchedGroupsForPattern:@"\\b([a-zA-Z]+?)\\b"];
+			[[theValue([groups count]) should] equal:theValue(4)];
+			[[groups[3] should] equal:@"quest"];
+		});
+		
+		it(@"should return extracted groups as a flattened array when the pattern contains multiple groups", ^
+		{
+			NSArray *groups = [@"What is your quest?" rx_matchedGroupsForPattern:@"\\b([a-zA-z])([a-zA-Z]+?)\\b"];
+			[[theValue([groups count]) should] equal:theValue(8)];
+			[[groups[7] should] equal:@"uest"];
+		});
+	});
 });
 
 SPEC_END
