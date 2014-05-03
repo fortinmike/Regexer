@@ -24,6 +24,10 @@
 		4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
 		4CECFCF519145E5F0022AA2A /* RegexerTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */; };
 		4CECFCF619145E670022AA2A /* Regexer.Mac-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */; };
+		4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CECFCFD1914644A0022AA2A /* RXRegexCache.h */; };
+		4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CECFCFD1914644A0022AA2A /* RXRegexCache.h */; };
+		4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFCFE1914644A0022AA2A /* RXRegexCache.m */; };
+		4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFCFE1914644A0022AA2A /* RXRegexCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 		4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RegexerTests-Info.plist"; sourceTree = "<group>"; };
 		4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexer.h"; sourceTree = "<group>"; };
 		4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexer.m"; sourceTree = "<group>"; };
+		4CECFCFD1914644A0022AA2A /* RXRegexCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRegexCache.h; sourceTree = "<group>"; };
+		4CECFCFE1914644A0022AA2A /* RXRegexCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRegexCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,8 @@
 				4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */,
 				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
 				4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */,
+				4CECFCFD1914644A0022AA2A /* RXRegexCache.h */,
+				4CECFCFE1914644A0022AA2A /* RXRegexCache.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */,
+				4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */,
 				4CECFCF219145E4D0022AA2A /* NSString+Regexer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC18D4719145C9B00CEECEC /* Regexer-Prefix.pch in Headers */,
+				4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */,
 				4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */,
 				4CECFCF119145E4B0022AA2A /* NSString+Regexer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */,
 				4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
