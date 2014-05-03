@@ -7,10 +7,11 @@ Your regex helper. Makes working with regular expressions in Objective-C short, 
 
 ## Features
 
+- Implemented as a category on NSString which makes for super-clean regex-using code.
 - As you most probably know, there is a non-negligible cost to regex compilation. Regexer keeps compiled regexes around to prevent unnecessary re-compilation for subsequent uses of the same regex.
-- Implemented as a category on NSString which makes for super-clean, regex-using code.
 - Use regexes without polluting your classes with regex instantitation, compilation and caching logic.
 - Regexes are lazily compiled for you, automatically. If you want to precompile them for performance reasons, Regexer enables that, too.
+- Regexer is thread-safe.
 
 ## Usage
 
@@ -27,7 +28,7 @@ Your regex helper. Makes working with regular expressions in Objective-C short, 
 
 ## Implementation Details
 
-- Regexer caches and indexes compiled regexes by a hash of their pattern and options, so multiple regexes using the same pattern with different options will not clash.
+- Regexer caches and indexes compiled regexes by their pattern and options, so multiple regexes using the same pattern with different options will not clash.
 
 ## Installation
 

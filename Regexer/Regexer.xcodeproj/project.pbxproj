@@ -16,14 +16,11 @@
 		4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4CC18D3419145C6400CEECEC /* Regexer.iOS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */; };
 		4CC18D4719145C9B00CEECEC /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
-		4CC18D4C19145CA300CEECEC /* RegexerTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */; };
 		4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */; };
 		4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */; };
 		4CECFCF119145E4B0022AA2A /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */; };
 		4CECFCF219145E4D0022AA2A /* NSString+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */; };
 		4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
-		4CECFCF519145E5F0022AA2A /* RegexerTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */; };
-		4CECFCF619145E670022AA2A /* Regexer.Mac-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */; };
 		4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CECFCFD1914644A0022AA2A /* RXRegexCache.h */; };
 		4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CECFCFD1914644A0022AA2A /* RXRegexCache.h */; };
 		4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFCFE1914644A0022AA2A /* RXRegexCache.m */; };
@@ -307,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CECFCF619145E670022AA2A /* Regexer.Mac-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +311,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CECFCF519145E5F0022AA2A /* RegexerTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +318,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC18D4C19145CA300CEECEC /* RegexerTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
