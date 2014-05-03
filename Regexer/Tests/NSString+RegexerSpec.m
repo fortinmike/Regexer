@@ -42,7 +42,7 @@ describe(@"NSString+Regexer", ^
 		
 		it(@"should perform case insensitive pattern matching", ^
 		{
-			[[theValue([@"Hello World" rx_matchesPattern:@"^[a-z0-9 ]+?$" caseSensitive:NO]) should] beYes];
+			[[theValue([@"Hello World" rx_matchesPattern:@"^[a-z0-9 ]+?$" options:NSRegularExpressionCaseInsensitive]) should] beYes];
 		});
 	});
 	
@@ -50,22 +50,27 @@ describe(@"NSString+Regexer", ^
 	{
 		it(@"should return an empty array when no groups are present in the pattern", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_matchedGroupsForPattern:@"\\b[a-zA-Z]+?\\b"];
+			NSArray *groups = [@"What is your quest?" rx_matchedGroupsWithPattern:@"\\b[a-zA-Z]+?\\b"];
 			[[theValue([groups count]) should] equal:theValue(0)];
 		});
 		
 		it(@"should return extracted groups when the pattern contains a single group", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_matchedGroupsForPattern:@"\\b([a-zA-Z]+?)\\b"];
+			NSArray *groups = [@"What is your quest?" rx_matchedGroupsWithPattern:@"\\b([a-zA-Z]+?)\\b"];
 			[[theValue([groups count]) should] equal:theValue(4)];
 			[[groups[3] should] equal:@"quest"];
 		});
 		
 		it(@"should return extracted groups as a flattened array when the pattern contains multiple groups", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_matchedGroupsForPattern:@"\\b([a-zA-z])([a-zA-Z]+?)\\b"];
+			NSArray *groups = [@"What is your quest?" rx_matchedGroupsWithPattern:@"\\b([a-zA-z])([a-zA-Z]+?)\\b"];
 			[[theValue([groups count]) should] equal:theValue(8)];
 			[[groups[7] should] equal:@"uest"];
+		});
+		
+		it(@"should return the appropriate element when asked for a specific group", ^
+		{
+			[[[@"What is your quest?" rx_matchedGroup:3 withPattern:@"\\b([a-zA-Z]+?)\\b"] should] equal:@"quest"];
 		});
 	});
 });

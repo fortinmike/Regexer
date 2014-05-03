@@ -33,26 +33,21 @@ static RXRegexCache *_regexCache;
 	return [self rx_regexWithOptions:0];
 }
 
-- (NSRegularExpression *)rx_regexCaseSensitive:(BOOL)caseSensitive
-{
-	return [self rx_regexWithOptions:(caseSensitive ? 0 : NSRegularExpressionCaseInsensitive)];
-}
-
 - (NSRegularExpression *)rx_regexWithOptions:(NSRegularExpressionOptions)options
 {
 	return [_regexCache regexForPattern:self options:options];
 }
 
-#pragma mark Checking for Matches
+#pragma mark Checking for Match
 
 - (BOOL)rx_matchesPattern:(NSString *)regexPattern
 {
-	return [self rx_matchesPattern:regexPattern caseSensitive:YES];
+	return [self rx_matchesPattern:regexPattern options:NSRegularExpressionCaseInsensitive];
 }
 
-- (BOOL)rx_matchesPattern:(NSString *)regexPattern caseSensitive:(BOOL)caseSensitive
+- (BOOL)rx_matchesPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 {
-	return [self rx_matchesRegex:[regexPattern rx_regexCaseSensitive:caseSensitive]];
+	return [self rx_matchesRegex:[regexPattern rx_regexWithOptions:options]];
 }
 
 - (BOOL)rx_matchesRegex:(NSRegularExpression *)regex
@@ -60,26 +55,26 @@ static RXRegexCache *_regexCache;
 	return ([regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])] > 0);
 }
 
-#pragma mark Groups
+#pragma mark Extracting Strings with Groups
 
-- (NSString *)rx_matchedGroup:(NSInteger)group inPattern:(NSString *)regexPattern
+- (NSString *)rx_matchedGroup:(NSInteger)group withPattern:(NSString *)regexPattern
 {
-	return [self rx_matchedGroup:group inPattern:regexPattern options:0];
+	return [self rx_matchedGroup:group withPattern:regexPattern options:0];
 }
 
-- (NSString *)rx_matchedGroup:(NSInteger)group inPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+- (NSString *)rx_matchedGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
-	NSArray *matchedGroups = [self rx_matchedGroupsForPattern:regexPattern];
+	NSArray *matchedGroups = [self rx_matchedGroupsWithPattern:regexPattern];
 	if (group >= [matchedGroups count]) return nil;
 	return [matchedGroups objectAtIndex:group];
 }
 
-- (NSArray *)rx_matchedGroupsForPattern:(NSString *)regexPattern
+- (NSArray *)rx_matchedGroupsWithPattern:(NSString *)regexPattern
 {
-	return [self rx_matchedGroupsForPattern:regexPattern options:0];
+	return [self rx_matchedGroupsWithPattern:regexPattern options:0];
 }
 
-- (NSArray *)rx_matchedGroupsForPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+- (NSArray *)rx_matchedGroupsWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
 	NSRegularExpression *regex = [_regexCache regexForPattern:regexPattern options:options];
 	
