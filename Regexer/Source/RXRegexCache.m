@@ -15,6 +15,14 @@
 
 #pragma mark Lifetime
 
++ (instancetype)sharedCache
+{
+	static dispatch_once_t pred;
+	static RXRegexCache *instance = nil;
+	dispatch_once(&pred, ^{ instance = [[self alloc] init]; });
+	return instance;
+}
+
 - (id)init
 {
     self = [super init];

@@ -10,6 +10,10 @@
 
 @interface RXRegexCache : NSObject
 
+#pragma mark Lifetime
+
++ (instancetype)sharedCache;
+
 #pragma mark Public Methods
 
 - (NSRegularExpression *)regexForPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options;

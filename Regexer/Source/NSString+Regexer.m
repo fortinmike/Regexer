@@ -18,7 +18,12 @@ static RXRegexCache *_regexCache;
 + (void)load
 {
 	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{ _regexCache = [[RXRegexCache alloc] init]; });
+	dispatch_once(&onceToken, ^
+	{
+		// Note: It's important that we use the shared cache so
+		// that we can clear the cache for testing purposes.
+		_regexCache = [RXRegexCache sharedCache];
+	});
 }
 
 #pragma mark Obtaining Lazily-Compiled, Cached Regexes
@@ -47,7 +52,7 @@ static RXRegexCache *_regexCache;
 
 - (BOOL)rx_matchesPattern:(NSString *)regexPattern caseSensitive:(BOOL)caseSensitive
 {
-	return [self rx_matchesRegex:[regexPattern rx_regexWithOptions:(caseSensitive ? 0 : NSRegularExpressionCaseInsensitive)]];
+	return [self rx_matchesRegex:[regexPattern rx_regexCaseSensitive:caseSensitive]];
 }
 
 - (BOOL)rx_matchesRegex:(NSRegularExpression *)regex
