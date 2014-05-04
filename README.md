@@ -28,9 +28,9 @@ If you would rather extract strings than perform a boolean check for matches, yo
 	BOOL match = [@"Hello World!" rx_matchesPattern:@"[a-zA-Z ]+?!"];
 	BOOL match = [@"Hello World!" rx_matchesPattern:@"[a-z ]+?!" options:NSRegularExpressionCaseInsensitive];
 
-#### Extracting Text Using Capturing Groups
+#### Extracting Text
 
-The following pattern matches words and captures the first letter of each word using a capturing group.
+The following pattern matches words and captures the first letter of each word using a capturing group, in addition to capturing the whole string matched by the pattern ($0).
 
 	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
 	
