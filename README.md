@@ -19,7 +19,7 @@ You can perform simple match checks super quickly using Regexer:
 
 	BOOL match = [@"Hello World!" rx_matchesPattern:@"[a-zA-Z ]+?!"];
 
-If you would rather extract strings than perform a boolean check for matches, you can do that too. When searching for matches using Regexer, you will obtain one or more `RXMatch` instance. Each `RXMatch` represents a single occurrence of the given pattern. An `RXMatch` exposes an array of `RXCapture`s. The first capture in the array is the whole matched pattern ($0) and the following captures correspond to the pattern's capturing groups ($1, $2, ...). Each capture exposes the captured text and its range in the original string.
+If you would rather extract strings than perform a boolean check for matches, you can do that too. When searching for matches using Regexer, you will obtain zero or more `RXMatch` instances. Each `RXMatch` represents a single occurrence of the given pattern. An `RXMatch` exposes an array of `RXCapture`s (which is also accessible through indexed subscripting). The first capture in the array is the whole matched pattern ($0) and the following captures correspond to the pattern's capturing groups ($1, $2, ...). Each capture exposes the captured text and its range in the original string.
 
 ## Usage
 
@@ -44,15 +44,15 @@ The following pattern matches words and captures the first letter of each word u
 	NSString *remainder2 = [matches[1][2] text]; // "eek"
 	NSRange word2Range = [matches[0][0] range]; // 3..6 (NSRange)
 
-#### If You're Interested in a Specific Capturing Group
+#### If You're Interested in a Specific Capturing Group Across All Matches
 
 	NSArray *captures = [@"To seek the Holy Grail." rx_capturesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
 			
-	[[[captures[0] text] should] equal:@"T"];
-	[[[captures[1] text] should] equal:@"s"];
-	[[[captures[2] text] should] equal:@"t"];
-	[[[captures[3] text] should] equal:@"H"];
-	[[[captures[4] text] should] equal:@"G"];
+	NSString *firstLetter1 [captures[0] text] // @"T"
+	NSString *firstLetter2 [captures[1] text] // @"s"
+	NSString *firstLetter3 [captures[2] text] // @"t"
+	NSString *firstLetter4 [captures[3] text] // @"H"
+	NSString *firstLetter5 [captures[4] text] // @"G"
 
 #### Working With Matches and Captures Directly
 
