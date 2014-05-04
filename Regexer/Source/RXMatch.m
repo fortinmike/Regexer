@@ -22,6 +22,19 @@
 	return self;
 }
 
+#pragma mark Subscripting Support
+
+- (id)objectAtIndexedSubscript:(NSUInteger)index
+{
+	if (index >= [_captures count])
+	{
+		NSString *reason = [NSString stringWithFormat:@"There is no capture group with index %lu", index];
+		@throw [NSException exceptionWithName:@"Invalid Operation" reason:reason userInfo:nil];
+	}
+	
+	return _captures[index];
+}
+
 #pragma mark NSObject Overrides
 
 - (NSString *)description

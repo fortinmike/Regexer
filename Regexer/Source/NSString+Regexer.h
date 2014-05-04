@@ -17,16 +17,16 @@
 - (NSRegularExpression *)rx_regex;
 - (NSRegularExpression *)rx_regexWithOptions:(NSRegularExpressionOptions)options;
 
-#pragma mark Checking for Match
+#pragma mark Checking For Matches
 
 - (BOOL)rx_matchesPattern:(NSString *)regexPattern;
 - (BOOL)rx_matchesPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (BOOL)rx_matchesRegex:(NSRegularExpression *)regex;
 
-#pragma mark Capture Groups
+#pragma mark Matches and Capturing Groups
 
-- (RXMatch *)rx_captureGroup:(NSInteger)group withPattern:(NSString *)regexPattern;
-- (RXMatch *)rx_captureGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
+- (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern;
+- (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern;
 - (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 

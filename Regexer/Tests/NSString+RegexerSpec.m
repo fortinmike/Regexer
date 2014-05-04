@@ -58,7 +58,7 @@ describe(@"NSString+Regexer", ^
 		});
 	});
 	
-	context(@"matching", ^
+	context(@"verifying match", ^
 	{
 		it(@"should perform case sensitive pattern matching", ^
 		{
@@ -71,31 +71,55 @@ describe(@"NSString+Regexer", ^
 		});
 	});
 	
-	context(@"extracting groups", ^
+	context(@"capture groups", ^
 	{
-		it(@"should return an empty array when no groups are present in the pattern", ^
+		it(@"should return an empty array when the pattern doesn't match anything", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
-			[[theValue([groups count]) should] equal:theValue(0)];
+			NSArray *matches = [@"What is your quest?" rx_matchesWithPattern:@"\\bknight\\b"];
+			[[theValue([matches count]) should] equal:theValue(0)];
 		});
 		
-		it(@"should return extracted groups when the pattern contains a single group", ^
+		it(@"should return appropriate matches and captures when the pattern contains no capturing group", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_matchesWithPattern:@"\\b([a-zA-Z]+?)\\b"];
-			[[theValue([groups count]) should] equal:theValue(4)];
-			[[groups[3] should] equal:@"quest"];
+			NSArray *matches = [@"What is your quest?" rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
+			
+			[[theValue([matches count]) should] equal:theValue(4)];
+			
+			[[[matches[0][0] text] should] equal:@"What"];
+			[[[matches[1][0] text] should] equal:@"is"];
+			[[[matches[2][0] text] should] equal:@"your"];
+			[[[matches[3][0] text] should] equal:@"quest"];
 		});
 		
-		it(@"should return extracted groups as a flattened array when the pattern contains multiple groups", ^
+		it(@"should return appropriate matches and captures when the pattern contains capturing groups", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_matchesWithPattern:@"\\b([a-zA-z])([a-zA-Z]+?)\\b"];
-			[[theValue([groups count]) should] equal:theValue(8)];
-			[[groups[7] should] equal:@"uest"];
+			NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
+			
+			[[theValue([matches count]) should] equal:theValue(5)];
+			
+			[[[matches[0][0] text] should] equal:@"To"];
+			[[[matches[0][1] text] should] equal:@"T"];
+			[[[matches[0][2] text] should] equal:@"o"];
+			[[[matches[1][0] text] should] equal:@"seek"];
+			[[[matches[1][1] text] should] equal:@"s"];
+			[[[matches[1][2] text] should] equal:@"eek"];
+			[[[matches[2][0] text] should] equal:@"the"];
+			[[[matches[2][1] text] should] equal:@"t"];
+			[[[matches[2][2] text] should] equal:@"he"];
+			[[[matches[3][0] text] should] equal:@"Holy"];
+			[[[matches[3][1] text] should] equal:@"H"];
+			[[[matches[3][2] text] should] equal:@"oly"];
+			[[[matches[4][0] text] should] equal:@"Grail"];
+			[[[matches[4][1] text] should] equal:@"G"];
+			[[[matches[4][2] text] should] equal:@"rail"];
 		});
 		
-		it(@"should return the appropriate element when asked for a specific group", ^
+		it(@"should throw when asked for a capture that doesn't exist in the pattern", ^
 		{
-			[[[@"What is your quest?" rx_captureGroup:3 withPattern:@"\\b([a-zA-Z]+?)\\b"] should] equal:@"quest"];
+			// Note: There is only one capturing group in this regex
+			NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])[a-zA-Z]+?\\b"];
+			
+			[[theBlock(^{ [matches[0][2] text]; }) should] raise];
 		});
 	});
 });
