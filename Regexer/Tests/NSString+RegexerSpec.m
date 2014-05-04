@@ -121,6 +121,17 @@ describe(@"NSString+Regexer", ^
 			
 			[[theBlock(^{ [matches[0][2] text]; }) should] raise];
 		});
+		
+		it(@"should return the captures for the specified group across matches", ^
+		{
+			NSArray *captures = [@"To seek the Holy Grail." rx_capturesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
+			
+			[[[captures[0] text] should] equal:@"T"];
+			[[[captures[1] text] should] equal:@"s"];
+			[[[captures[2] text] should] equal:@"t"];
+			[[[captures[3] text] should] equal:@"H"];
+			[[[captures[4] text] should] equal:@"G"];
+		});
 	});
 });
 
