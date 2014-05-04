@@ -23,14 +23,45 @@ If you would rather extract strings than perform a boolean check for matches, yo
 
 ## Usage
 
-#### Checking For Matches
+#### Checking for Matches
 
 	BOOL match = [@"Hello World!" rx_matchesPattern:@"[a-zA-Z ]+?!"];
 	BOOL match = [@"Hello World!" rx_matchesPattern:@"[a-z ]+?!" options:NSRegularExpressionCaseInsensitive];
 
 #### Extracting Text Using Capturing Groups
 
+The following pattern matches words and captures the first letter of each word using a capturing group.
+
+	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
 	
+	NSString *word1 = [matches[0][0] text]; // @"To" (equivalent to $0 in regex-speak)
+	NSString *letter1 = [matches[0][1] text]; // @"T" (equivalent to $1 in regex-speak)
+	NSString *remainder1 = [matches[0][2] text]; // @"o" (equivalent to $2 in regex-speak)
+	NSRange word1Range = [matches[0][0] range]; // 0..1 (NSRange)
+	
+	NSString *word2 = [matches[1][0] text]; // @"seek"
+	NSString *letter2 = [matches[1][1] text]; // @"s"
+	NSString *remainder2 = [matches[1][2] text]; // "eek"
+	NSRange word2Range = [matches[0][0] range]; // 3..6 (NSRange)
+
+#### If You're Interested in a Specific Capturing Group
+
+	NSArray *captures = [@"To seek the Holy Grail." rx_capturesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
+			
+	[[[captures[0] text] should] equal:@"T"];
+	[[[captures[1] text] should] equal:@"s"];
+	[[[captures[2] text] should] equal:@"t"];
+	[[[captures[3] text] should] equal:@"H"];
+	[[[captures[4] text] should] equal:@"G"];
+
+#### Working With Matches and Captures Directly
+
+	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
+	
+	RXMatch *match = [matches firstObject];
+	RXCapture *capture = [[match captures] objectAtIndex:0]; // Or: match[0]
+	NSString *text = [capture text];
+	NSRange range = [capture range];
 
 #### Obtaining Cached NSRegularExpression Instances
 
