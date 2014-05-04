@@ -71,7 +71,7 @@ static RXRegexCache *_regexCache;
 	NSMutableArray *captures = [NSMutableArray array];
 	
 	for (RXMatch *match in matches)
-		[captures addObject:[[match captures] objectAtIndex:group - 1]];
+		[captures addObject:[[match captures] objectAtIndex:group]];
 	
 	return captures;
 }
