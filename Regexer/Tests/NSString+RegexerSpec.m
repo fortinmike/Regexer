@@ -122,6 +122,14 @@ describe(@"NSString+Regexer", ^
 			[[theBlock(^{ [matches[0][2] text]; }) should] raise];
 		});
 		
+		it(@"matches should expose their text and range", ^
+		{
+			NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
+			
+			[[[matches[0] text] should] equal:@"To"];
+			[[[matches[1] text] should] equal:@"seek"];
+		});
+		
 		it(@"should return the captures for the specified group across matches", ^
 		{
 			NSArray *captures = [@"To seek the Holy Grail." rx_capturesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];

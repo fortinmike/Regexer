@@ -29,6 +29,11 @@
 	return [[_captures firstObject] text];
 }
 
+- (NSRange)range
+{
+	return [[_captures firstObject] range];
+}
+
 #pragma mark Subscripting Support
 
 - (id)objectAtIndexedSubscript:(NSUInteger)index

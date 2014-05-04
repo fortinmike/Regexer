@@ -19,7 +19,7 @@ You can perform simple match checks super quickly using Regexer:
 
 	BOOL match = [@"Hello World!" rx_matchesPattern:@"[a-zA-Z ]+?!"];
 
-If you would rather extract strings than perform a boolean check for matches, you can do that too. When searching for matches using Regexer, you will obtain zero or more `RXMatch` instances. Each `RXMatch` represents a single occurrence of the given pattern. An `RXMatch` exposes an array of `RXCapture`s (which is also accessible through indexed subscripting). The first capture in the array is the whole matched pattern ($0) and the following captures correspond to the pattern's capturing groups ($1, $2, ...). Each capture exposes the captured text and its range in the original string.
+If you would rather extract strings than perform a boolean check for matches, you can do that too. When searching for matches using Regexer, you will obtain zero or more `RXMatch` instances. Each `RXMatch` represents a single occurrence of the given pattern. An `RXMatch` exposes its text, range and an array of `RXCapture`s (which is also accessible through indexed subscripting). The first capture in the array is the whole matched pattern ($0) and the following captures correspond to the pattern's capturing groups ($1, $2, ...). Each capture exposes the captured text and its range in the original string.
 
 ## Usage
 
@@ -43,8 +43,17 @@ The following pattern matches words and captures the first letter of each word u
 	NSString *letter2 = [matches[1][1] text]; // @"s"
 	NSString *remainder2 = [matches[1][2] text]; // "eek"
 	NSRange word2Range = [matches[0][0] range]; // 3..6 (NSRange)
+	
+#### Whole-Pattern Matches
 
-#### If You're Interested in a Specific Capturing Group Across All Matches
+	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
+	
+	NSString *word1 = [matches[0] text]; // @"To"
+	NSString *range1 = [matches[0] range]; // 0..1 (NSRange)
+	NSString *word2 = [matches[1] text]; // @"seek"
+	NSString *range2 = [matches[1] range]; // 3..6 (NSRange)
+
+#### Getting a Specific Capturing Group Across All Matches
 
 	NSArray *captures = [@"To seek the Holy Grail." rx_capturesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
 			

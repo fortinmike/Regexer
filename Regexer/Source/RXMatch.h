@@ -12,6 +12,7 @@
 
 @property (readonly) NSArray *captures;
 @property (readonly) NSString *text;
+@property (readonly) NSRange range;
 
 #pragma mark Lifetime
 

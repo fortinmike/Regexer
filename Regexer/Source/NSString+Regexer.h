@@ -25,8 +25,6 @@
 
 #pragma mark Matches and Capturing Groups
 
-- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern;
-- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern;
 - (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern;
