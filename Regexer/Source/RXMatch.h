@@ -11,6 +11,7 @@
 @interface RXMatch : NSObject
 
 @property (readonly) NSArray *captures;
+@property (readonly) NSString *text;
 
 #pragma mark Lifetime
 

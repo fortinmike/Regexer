@@ -22,6 +22,13 @@
 	return self;
 }
 
+#pragma mark Accessor Overrides
+
+- (NSString *)text
+{
+	return [[_captures firstObject] text];
+}
+
 #pragma mark Subscripting Support
 
 - (id)objectAtIndexedSubscript:(NSUInteger)index
