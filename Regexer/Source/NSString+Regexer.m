@@ -57,6 +57,16 @@ static RXRegexCache *_regexCache;
 
 #pragma mark Matches and Capturing Groups
 
+- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern
+{
+	return [self rx_capturesWithPattern:regexPattern options:0];
+}
+
+- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+{
+	return [self rx_capturesForGroup:0 withPattern:regexPattern options:options];
+}
+
 - (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern
 {
 	return [self rx_capturesForGroup:group withPattern:regexPattern options:0];
