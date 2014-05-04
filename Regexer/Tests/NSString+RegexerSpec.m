@@ -130,6 +130,14 @@ describe(@"NSString+Regexer", ^
 			[[[matches[1] text] should] equal:@"seek"];
 		});
 		
+		it(@"matches' text and range should be the same as that match's first capture ($0)", ^
+		{
+			NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
+			
+			[[[matches[0] text] should] equal:[matches[0][0] text]];
+			[[[matches[1] text] should] equal:[matches[1][0] text]];
+		});
+		
 		it(@"should return the captures for the specified group across matches", ^
 		{
 			NSArray *captures = [@"To seek the Holy Grail." rx_capturesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
