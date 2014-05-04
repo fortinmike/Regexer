@@ -75,27 +75,27 @@ describe(@"NSString+Regexer", ^
 	{
 		it(@"should return an empty array when no groups are present in the pattern", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_capturesWithPattern:@"\\b[a-zA-Z]+?\\b"];
+			NSArray *groups = [@"What is your quest?" rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
 			[[theValue([groups count]) should] equal:theValue(0)];
 		});
 		
 		it(@"should return extracted groups when the pattern contains a single group", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_capturesWithPattern:@"\\b([a-zA-Z]+?)\\b"];
+			NSArray *groups = [@"What is your quest?" rx_matchesWithPattern:@"\\b([a-zA-Z]+?)\\b"];
 			[[theValue([groups count]) should] equal:theValue(4)];
 			[[groups[3] should] equal:@"quest"];
 		});
 		
 		it(@"should return extracted groups as a flattened array when the pattern contains multiple groups", ^
 		{
-			NSArray *groups = [@"What is your quest?" rx_capturesWithPattern:@"\\b([a-zA-z])([a-zA-Z]+?)\\b"];
+			NSArray *groups = [@"What is your quest?" rx_matchesWithPattern:@"\\b([a-zA-z])([a-zA-Z]+?)\\b"];
 			[[theValue([groups count]) should] equal:theValue(8)];
 			[[groups[7] should] equal:@"uest"];
 		});
 		
 		it(@"should return the appropriate element when asked for a specific group", ^
 		{
-			[[[@"What is your quest?" rx_capture:3 withPattern:@"\\b([a-zA-Z]+?)\\b"] should] equal:@"quest"];
+			[[[@"What is your quest?" rx_captureGroup:3 withPattern:@"\\b([a-zA-Z]+?)\\b"] should] equal:@"quest"];
 		});
 	});
 });

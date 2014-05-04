@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		206826C7ABEE471EA0932124 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
+		4C4D2DAD191583F300585B57 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DAB191583F300585B57 /* RXCapture.h */; };
+		4C4D2DAE191583F300585B57 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DAB191583F300585B57 /* RXCapture.h */; };
+		4C4D2DAF191583F300585B57 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DAC191583F300585B57 /* RXCapture.m */; };
+		4C4D2DB0191583F300585B57 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DAC191583F300585B57 /* RXCapture.m */; };
+		4C4D2DB31915852300585B57 /* RXMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DB11915852300585B57 /* RXMatch.h */; };
+		4C4D2DB41915852300585B57 /* RXMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DB11915852300585B57 /* RXMatch.h */; };
+		4C4D2DB51915852300585B57 /* RXMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DB21915852300585B57 /* RXMatch.m */; };
+		4C4D2DB61915852300585B57 /* RXMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DB21915852300585B57 /* RXMatch.m */; };
 		4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
@@ -52,6 +60,10 @@
 /* Begin PBXFileReference section */
 		38990A9BF186483784019B54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3F08C97F96A34A0F8AE9D657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4D2DAB191583F300585B57 /* RXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCapture.h; sourceTree = "<group>"; };
+		4C4D2DAC191583F300585B57 /* RXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCapture.m; sourceTree = "<group>"; };
+		4C4D2DB11915852300585B57 /* RXMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMatch.h; sourceTree = "<group>"; };
+		4C4D2DB21915852300585B57 /* RXMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMatch.m; sourceTree = "<group>"; };
 		4C59965719145A4900EFA82C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4C59965A19145A4900EFA82C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C59965B19145A4900EFA82C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -164,6 +176,10 @@
 				4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */,
 				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
 				4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */,
+				4C4D2DAB191583F300585B57 /* RXCapture.h */,
+				4C4D2DAC191583F300585B57 /* RXCapture.m */,
+				4C4D2DB11915852300585B57 /* RXMatch.h */,
+				4C4D2DB21915852300585B57 /* RXMatch.m */,
 				4CECFCFD1914644A0022AA2A /* RXRegexCache.h */,
 				4CECFCFE1914644A0022AA2A /* RXRegexCache.m */,
 			);
@@ -188,7 +204,9 @@
 			files = (
 				4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */,
 				4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */,
+				4C4D2DB41915852300585B57 /* RXMatch.h in Headers */,
 				4CECFCF219145E4D0022AA2A /* NSString+Regexer.h in Headers */,
+				4C4D2DAE191583F300585B57 /* RXCapture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +216,9 @@
 			files = (
 				4CC18D4719145C9B00CEECEC /* Regexer-Prefix.pch in Headers */,
 				4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */,
+				4C4D2DB31915852300585B57 /* RXMatch.h in Headers */,
 				4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */,
+				4C4D2DAD191583F300585B57 /* RXCapture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4D2DB0191583F300585B57 /* RXCapture.m in Sources */,
 				4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */,
+				4C4D2DB61915852300585B57 /* RXMatch.m in Sources */,
 				4CECFCF119145E4B0022AA2A /* NSString+Regexer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +480,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4D2DAF191583F300585B57 /* RXCapture.m in Sources */,
 				4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */,
+				4C4D2DB51915852300585B57 /* RXMatch.m in Sources */,
 				4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

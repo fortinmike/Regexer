@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RXMatch.h"
+#import "RXCapture.h"
 
 @interface NSString (Regexer)
 
@@ -21,11 +23,11 @@
 - (BOOL)rx_matchesPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (BOOL)rx_matchesRegex:(NSRegularExpression *)regex;
 
-#pragma mark Extracting Strings with Capture Groups
+#pragma mark Capture Groups
 
-- (NSString *)rx_capture:(NSInteger)group withPattern:(NSString *)regexPattern;
-- (NSString *)rx_capture:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
-- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern;
-- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
+- (RXMatch *)rx_captureGroup:(NSInteger)group withPattern:(NSString *)regexPattern;
+- (RXMatch *)rx_captureGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
+- (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern;
+- (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 
 @end

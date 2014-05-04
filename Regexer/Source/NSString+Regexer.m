@@ -55,49 +55,60 @@ static RXRegexCache *_regexCache;
 	return ([regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])] > 0);
 }
 
-#pragma mark Extracting Strings with Capture Groups
+#pragma mark Capture Groups
 
-- (NSString *)rx_capture:(NSInteger)group withPattern:(NSString *)regexPattern
+- (RXMatch *)rx_captureGroup:(NSInteger)group withPattern:(NSString *)regexPattern
 {
-	return [self rx_capture:group withPattern:regexPattern options:0];
+	return [self rx_captureGroup:group withPattern:regexPattern options:0];
 }
 
-- (NSString *)rx_capture:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+- (RXMatch *)rx_captureGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
-	NSArray *matchedGroups = [self rx_capturesWithPattern:regexPattern];
+	NSArray *matchedGroups = [self rx_matchesWithPattern:regexPattern];
 	if (group >= [matchedGroups count]) return nil;
 	return [matchedGroups objectAtIndex:group];
 }
 
-- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern
+- (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern
 {
-	return [self rx_capturesWithPattern:regexPattern options:0];
+	return [self rx_matchesWithPattern:regexPattern options:0];
 }
 
-- (NSArray *)rx_capturesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+- (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
 	NSRegularExpression *regex = [_regexCache regexForPattern:regexPattern options:options];
 	
-	NSArray *textCheckingResults = [regex matchesInString:self options:0 range:NSMakeRange(0, [self length])];
+	NSArray *results = [regex matchesInString:self options:0 range:NSMakeRange(0, [self length])];
 	
-	NSMutableArray *strings = [NSMutableArray array];
-	for (NSTextCheckingResult *result in textCheckingResults)
+	NSMutableArray *matches = [NSMutableArray array];
+	for (NSTextCheckingResult *textCheckingResult in results)
 	{
-		NSInteger numberOfRanges = [result numberOfRanges];
+		NSInteger numberOfRanges = [textCheckingResult numberOfRanges];
 		
-		if (numberOfRanges <= 1) return nil; // The first range is the whole string
+		// The first range is the whole matched string, which we
+		// don't care about when extracting capture groups.
+		if (numberOfRanges <= 1) continue;
 		
+		NSMutableArray *captures = [NSMutableArray array];
 		for (int rangeIndex = 1; rangeIndex < numberOfRanges; rangeIndex++)
 		{
-			NSRange range = [result rangeAtIndex:rangeIndex];
-			if (range.location == NSNotFound) continue;
+			NSRange range = [textCheckingResult rangeAtIndex:rangeIndex];
+			if (range.location == NSNotFound)
+			{
+				[captures addObject:[RXCapture notFoundCapture]];
+				continue;
+			}
 			
-			NSString *group = [self substringWithRange:range];
-			[strings addObject:group];
+			NSString *text = [self substringWithRange:range];
+			RXCapture *capture = [[RXCapture alloc] initWithRange:range text:text];
+			
+			[captures addObject:capture];
 		}
+		
+		[matches addObject:[[RXMatch alloc] initWithCaptures:[captures copy]]];
 	}
 	
-	return strings;
+	return matches;
 }
 
 @end
