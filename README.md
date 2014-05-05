@@ -32,6 +32,27 @@ If you simply want to know whether a given string matches a pattern, you can do 
 
 #### Extracting Text
 
+You can quickly obtain the strings and ranges of text matched by your pattern:
+
+	NSString *someText = @"What is your quest?";
+	NSString *pattern = @"\\b[a-zA-Z]+?\\b";
+	
+	NSArray *texts = [someText rx_textsForMatchesWithPattern:pattern];
+	NSArray *ranges = [someText rx_rangesForMatchesWithPattern:pattern];
+
+If you're interested in both texts and ranges, it is more efficient to benefit from the fact that Regexer also exposes the matched text and range at the `RXMatch` level. This is equivalent to accessing the first capture ($0) in the match, which always corresponds to the whole matched pattern. This is a great way to work with matches if you don't use capturing groups:
+
+	NSArray *matches = [someText rx_matchesWithPattern:pattern];
+	
+	for (RXMatch *match in matches)
+	{
+		NSLog(@"Text: %@, Range: [location: %d, length: %d]", [match text],
+		                                                      [match range].location,
+		                                                      [match range].length);
+	}
+
+#### Advanced Text Extraction Using Capturing Groups
+
 The following pattern matches words and captures the first letter of each word using a capturing group, in addition to capturing the whole string matched by the pattern ($0). Using indexed subscripting (the square brackets operator), you can quickly extract any required info:
 
 	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
@@ -41,7 +62,7 @@ The following pattern matches words and captures the first letter of each word u
 	NSString *remainder1 = [matches[0][2] text]; // @"o" (equivalent to $2 in regex-speak)
 	NSRange word1Range = [matches[0][0] range]; // 0..1 (NSRange)
 
-You can also iterate over the matches and/or captures as required:
+You can also iterate over matches and/or captures as required:
 
 	for (RXCapture *capture in [matches[1] captures])
 	{
@@ -49,18 +70,6 @@ You can also iterate over the matches and/or captures as required:
 		                                                      [capture range].location,
 		                                                      [capture range].length);
 	}
-	
-#### Whole-Pattern Matches
-
-Regexer also exposes the matched text and range at the `RXMatch` level. This is equivalent to accessing the first capture ($0) in the match, which always corresponds to the whole matched pattern. This is a great way to work with matches if you don't use capturing groups.
-
-	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b[a-zA-Z]+?\\b"];
-	
-	NSString *word1 = [matches[0] text]; // @"To"
-	NSString *range1 = [matches[0] range]; // 0..1 (NSRange)
-	NSString *word2 = [matches[1] text]; // @"seek"
-	NSString *range2 = [matches[1] range]; // 3..6 (NSRange)
-	...
 
 #### Obtaining a Specific Capturing Group Across All Matches
 
@@ -90,7 +99,7 @@ If you are interested in a single capturing group across all matches of your pat
 
 #### Working With Matches and Captures Directly
 
-If you prefer being more explicit and avoiding indexed subscripting, you can also manipulate `RXMatch` and `RXCapture` instances directly:
+If you prefer being more explicit and avoid indexed subscripting, you can also manipulate `RXMatch` and `RXCapture` instances directly:
 
 	NSArray *matches = [@"To seek the Holy Grail." rx_matchesWithPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
 	
@@ -108,7 +117,7 @@ If you simply want a pre-compiled, cached `NSRegularExpression` instance to perf
 
 ## Implementation Details
 
-- Regexer caches and indexes compiled regexes by their pattern and options, so rest assured that multiple regexes using the same pattern with different options will not clash.
+- Regexer indexes cached compiled regexes by their pattern and options, so rest assured that multiple regexes with the same pattern but with different options will not clash.
 
 ## Installation
 
