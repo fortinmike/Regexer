@@ -14,6 +14,4 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Regexer/Source'
   s.public_header_files = 'Regexer/Source/**/*.h'
-  
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
 end
