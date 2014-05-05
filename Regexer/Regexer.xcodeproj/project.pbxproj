@@ -20,6 +20,10 @@
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19719145D25009CB21B /* Regexer.Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BB18219145D24009CB21B /* Regexer.Mac.framework */; };
+		4C9C724E1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */; };
+		4C9C724F1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */; };
+		4C9C72501916A76500C4BFA8 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */; };
+		4C9C72511916A76500C4BFA8 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */; };
 		4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
@@ -71,6 +75,8 @@
 		4C59966C19145A4900EFA82C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4C5BB18219145D24009CB21B /* Regexer.Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regexer.Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5BB19219145D25009CB21B /* Regexer.Mac.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.Mac.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Regexer.h"; sourceTree = "<group>"; };
+		4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Regexer.m"; sourceTree = "<group>"; };
 		4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Regexer.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D2F19145C6400CEECEC /* Regexer.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Regexer-Prefix.pch"; sourceTree = "<group>"; };
@@ -172,6 +178,8 @@
 		4CC18D4319145C9B00CEECEC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */,
+				4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */,
 				4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */,
 				4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */,
 				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
@@ -206,6 +214,7 @@
 				4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */,
 				4C4D2DB41915852300585B57 /* RXMatch.h in Headers */,
 				4CECFCF219145E4D0022AA2A /* NSString+Regexer.h in Headers */,
+				4C9C724F1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */,
 				4C4D2DAE191583F300585B57 /* RXCapture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +227,7 @@
 				4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */,
 				4C4D2DB31915852300585B57 /* RXMatch.h in Headers */,
 				4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */,
+				4C9C724E1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */,
 				4C4D2DAD191583F300585B57 /* RXCapture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +472,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4D2DB0191583F300585B57 /* RXCapture.m in Sources */,
+				4C9C72511916A76500C4BFA8 /* NSArray+Regexer.m in Sources */,
 				4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */,
 				4C4D2DB61915852300585B57 /* RXMatch.m in Sources */,
 				4CECFCF119145E4B0022AA2A /* NSString+Regexer.m in Sources */,
@@ -481,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4D2DAF191583F300585B57 /* RXCapture.m in Sources */,
+				4C9C72501916A76500C4BFA8 /* NSArray+Regexer.m in Sources */,
 				4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */,
 				4C4D2DB51915852300585B57 /* RXMatch.m in Sources */,
 				4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */,

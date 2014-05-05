@@ -8,6 +8,7 @@
 
 #import "NSString+Regexer.h"
 #import "RXRegexCache.h"
+#import "NSArray+Regexer.h"
 
 @implementation NSString (Regexer)
 
@@ -56,6 +57,28 @@ static RXRegexCache *_regexCache;
 }
 
 #pragma mark Matches and Capturing Groups
+
+- (NSArray *)rx_textsForGroup:(NSInteger)group withPattern:(NSString *)regexPattern
+{
+	return [self rx_textsForGroup:group withPattern:regexPattern options:0];
+}
+
+- (NSArray *)rx_textsForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+{
+	NSArray *captures = [self rx_capturesForGroup:group withPattern:regexPattern options:options];
+	return [captures rx_map:^id(RXCapture *capture) { return [capture text]; }];
+}
+
+- (NSArray *)rx_rangesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern
+{
+	return [self rx_rangesForGroup:group withPattern:regexPattern options:0];
+}
+
+- (NSArray *)rx_rangesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+{
+	NSArray *captures = [self rx_capturesForGroup:group withPattern:regexPattern options:options];
+	return [captures rx_map:^id(RXCapture *capture) { return [NSValue valueWithRange:[capture range]]; }];
+}
 
 - (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern
 {

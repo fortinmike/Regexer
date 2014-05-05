@@ -148,6 +148,24 @@ describe(@"NSString+Regexer", ^
 			[[[captures[3] text] should] equal:@"H"];
 			[[[captures[4] text] should] equal:@"G"];
 		});
+		
+		it(@"should return texts for a specified group across matches", ^
+		{
+			NSArray *texts = [@"To seek the Holy Grail." rx_textsForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
+			
+			[[texts should] equal:@[@"T", @"s", @"t", @"H", @"G"]];
+		});
+		
+		it(@"should return ranges for a specified group across matches", ^
+		{
+			NSArray *ranges = [@"To seek the Holy Grail." rx_rangesForGroup:1 withPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b"];
+			
+			[[ranges[0] should] equal:[NSValue valueWithRange:NSMakeRange(0, 1)]];
+			[[ranges[1] should] equal:[NSValue valueWithRange:NSMakeRange(3, 1)]];
+			[[ranges[2] should] equal:[NSValue valueWithRange:NSMakeRange(8, 1)]];
+			[[ranges[3] should] equal:[NSValue valueWithRange:NSMakeRange(12, 1)]];
+			[[ranges[4] should] equal:[NSValue valueWithRange:NSMakeRange(17, 1)]];
+		});
 	});
 });
 
