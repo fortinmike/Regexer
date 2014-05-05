@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Regexer"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "Your regex helper. Makes working with regular expressions in Objective-C short, sweet and performant."
   s.homepage         = "http://github.com/fortinmike/Regexer"
   s.license          = 'MIT'
