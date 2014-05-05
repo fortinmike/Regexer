@@ -3,7 +3,7 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/Regexer/badge.png)](http://cocoadocs.org/docsets/Regexer)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Regexer/badge.png)](http://cocoadocs.org/docsets/Regexer)
 
-Your **regex** help**er**. Makes working with regular expressions in Objective-C short, sweet and performant.
+Your regex helper. Makes working with regular expressions in Objective-C short, sweet and performant.
 
 ## Features
 
