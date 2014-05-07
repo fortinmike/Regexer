@@ -1,9 +1,5 @@
-target 'Regexer.iOS.Tests' do
-	platform :ios, '6.0'
-end
+podspec :path => "../Regexer.podspec"
 
-target 'Regexer.Mac.Tests' do
-	platform :osx, '10.7'
-end
+link_with 'Regexer.iOS.Tests', 'Regexer.Mac.Tests'
 
 pod 'Kiwi/XCTest', '~> 2.2.4'

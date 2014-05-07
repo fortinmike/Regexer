@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		206826C7ABEE471EA0932124 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
 		4C4D2DAD191583F300585B57 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DAB191583F300585B57 /* RXCapture.h */; };
 		4C4D2DAE191583F300585B57 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DAB191583F300585B57 /* RXCapture.h */; };
 		4C4D2DAF191583F300585B57 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DAC191583F300585B57 /* RXCapture.m */; };
@@ -19,7 +18,6 @@
 		4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4C5BB19719145D25009CB21B /* Regexer.Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BB18219145D24009CB21B /* Regexer.Mac.framework */; };
 		4C9C724E1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */; };
 		4C9C724F1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */; };
 		4C9C72501916A76500C4BFA8 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */; };
@@ -27,7 +25,6 @@
 		4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4CC18D3419145C6400CEECEC /* Regexer.iOS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */; };
 		4CC18D4719145C9B00CEECEC /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
 		4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */; };
 		4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */; };
@@ -40,8 +37,8 @@
 		4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFCFE1914644A0022AA2A /* RXRegexCache.m */; };
 		4CECFD04191492AD0022AA2A /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */; };
 		4CECFD05191492AD0022AA2A /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */; };
-		B9DC419F83E042C98E4F6929 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		D88E53385B1641678E62DA0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
+		D5BF7AB6409B408292A34395 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
+		D6EEE78AE5DB447381705EFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152907A66FE54CC48B1858A3 /* libPods-Regexer.Mac.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.Mac.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34562BCD3F0946B19C8D054D /* libPods-Regexer.iOS.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.iOS.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38990A9BF186483784019B54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3F08C97F96A34A0F8AE9D657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4D2DAB191583F300585B57 /* RXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCapture.h; sourceTree = "<group>"; };
@@ -87,6 +86,8 @@
 		4CECFCFD1914644A0022AA2A /* RXRegexCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRegexCache.h; sourceTree = "<group>"; };
 		4CECFCFE1914644A0022AA2A /* RXRegexCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRegexCache.m; sourceTree = "<group>"; };
 		4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexerSpec.m"; sourceTree = "<group>"; };
+		7127DE6A178E4DCE9A41904E /* Pods-Regexer.iOS.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.Tests.xcconfig"; path = "Pods/Pods-Regexer.iOS.Tests.xcconfig"; sourceTree = "<group>"; };
+		A3B0439014C045479A6ADE27 /* Pods-Regexer.Mac.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.Tests.xcconfig"; path = "Pods/Pods-Regexer.Mac.Tests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5BB19719145D25009CB21B /* Regexer.Mac.framework in Frameworks */,
 				4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */,
 				4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */,
-				B9DC419F83E042C98E4F6929 /* libPods.a in Frameworks */,
+				D5BF7AB6409B408292A34395 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */,
-				206826C7ABEE471EA0932124 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,9 +122,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */,
-				4CC18D3419145C6400CEECEC /* Regexer.iOS.dylib in Frameworks */,
 				4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */,
-				D88E53385B1641678E62DA0B /* libPods.a in Frameworks */,
+				D6EEE78AE5DB447381705EFD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +138,8 @@
 				4C59965619145A4900EFA82C /* Frameworks */,
 				4C59965519145A4900EFA82C /* Products */,
 				38990A9BF186483784019B54 /* Pods.xcconfig */,
+				A3B0439014C045479A6ADE27 /* Pods-Regexer.Mac.Tests.xcconfig */,
+				7127DE6A178E4DCE9A41904E /* Pods-Regexer.iOS.Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +161,8 @@
 				4C59966C19145A4900EFA82C /* XCTest.framework */,
 				4C59965919145A4900EFA82C /* Other Frameworks */,
 				3F08C97F96A34A0F8AE9D657 /* libPods.a */,
+				152907A66FE54CC48B1858A3 /* libPods-Regexer.Mac.Tests.a */,
+				34562BCD3F0946B19C8D054D /* libPods-Regexer.iOS.Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
