@@ -166,6 +166,12 @@ describe(@"NSString+Regexer", ^
 			[[ranges[3] should] equal:[NSValue valueWithRange:NSMakeRange(12, 1)]];
 			[[ranges[4] should] equal:[NSValue valueWithRange:NSMakeRange(17, 1)]];
 		});
+		
+		it(@"should perform replacements correctly", ^
+		{
+			NSString *altered = [@"What is your quest?" rx_stringByReplacingMatchesOfPattern:@"\\b([a-zA-Z]+?)\\b" withTemplate:@"$1-hello"];
+			[[altered should] equal:@"What-hello is-hello your-hello quest-hello?"];
+		});
 	});
 });
 
