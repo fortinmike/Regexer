@@ -115,6 +115,13 @@ If you simply want a pre-compiled, cached `NSRegularExpression` instance to perf
 	NSRegularExpression *regex = [@"[a-zA-Z0-9]{10}" rx_regex];
 	NSRegularExpression *regexWithOptions = [@"[a-zA-Z0-9]{10}" rx_regexWithOptions:NSRegularExpressionCaseInsensitive];
 
+#### Replacements
+
+Performing regex-based replacement using Regexer is easy:
+
+	NSString *altered = [@"What is your quest?" rx_stringByReplacingMatchesOfPattern:@"\\b([a-zA-Z]+?)\\b" withTemplate:@"$1-hello"];
+	// Result: @"What-hello is-hello your-hello quest-hello?"
+
 ## Implementation Details
 
 - Regexer indexes cached compiled regexes by their pattern and options, so rest assured that multiple regexes with the same pattern but with different options will not clash.
