@@ -169,8 +169,8 @@ describe(@"NSString+Regexer", ^
 		
 		it(@"should perform replacements correctly", ^
 		{
-			NSString *altered = [@"What is your quest?" rx_stringByReplacingMatchesOfPattern:@"\\b([a-zA-Z]+?)\\b" withTemplate:@"$1-hello"];
-			[[altered should] equal:@"What-hello is-hello your-hello quest-hello?"];
+			NSString *altered = [@"What is your quest?" rx_stringByReplacingMatchesOfPattern:@"\\b([a-zA-Z])([a-zA-Z]+?)\\b" withTemplate:@"Z$2-hello"];
+			[[altered should] equal:@"Zhat-hello Zs-hello Zour-hello Zuest-hello?"];
 		});
 	});
 });
