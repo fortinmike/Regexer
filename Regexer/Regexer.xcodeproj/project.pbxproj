@@ -85,6 +85,8 @@
 		4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RegexerTests-Info.plist"; sourceTree = "<group>"; };
 		4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexer.h"; sourceTree = "<group>"; };
 		4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexer.m"; sourceTree = "<group>"; };
+		4CC252D8191C157B00E49DF7 /* Regexer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Regexer.podspec; path = /Users/Michael/Projects/Software/Xcode/Pods/Regexer/Regexer.podspec; sourceTree = "<absolute>"; };
+		4CC252D9191C158600E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4CECFCFD1914644A0022AA2A /* RXRegexCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRegexCache.h; sourceTree = "<group>"; };
 		4CECFCFE1914644A0022AA2A /* RXRegexCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRegexCache.m; sourceTree = "<group>"; };
 		4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexerSpec.m"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				4CC18D4919145CA300CEECEC /* Tests */,
 				4C59965619145A4900EFA82C /* Frameworks */,
 				4C59965519145A4900EFA82C /* Products */,
+				4CC252DA191C158A00E49DF7 /* Supporting Files */,
 				38990A9BF186483784019B54 /* Pods.xcconfig */,
 				A3B0439014C045479A6ADE27 /* Pods-Regexer.Mac.Tests.xcconfig */,
 				7127DE6A178E4DCE9A41904E /* Pods-Regexer.iOS.Tests.xcconfig */,
@@ -207,6 +210,15 @@
 				4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		4CC252DA191C158A00E49DF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CC252D9191C158600E49DF7 /* README.md */,
+				4CC252D8191C157B00E49DF7 /* Regexer.podspec */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
