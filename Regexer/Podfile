@@ -1,5 +1,4 @@
+link_with 'Regexer.iOS', 'Regexer.iOS.Tests', 'Regexer.Mac', 'Regexer.Mac.Tests'
+
 podspec :path => "../Regexer.podspec"
-
-link_with 'Regexer.iOS.Tests', 'Regexer.Mac.Tests'
-
 pod 'Kiwi/XCTest', '~> 2.2.4'
