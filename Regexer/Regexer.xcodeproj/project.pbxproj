@@ -80,8 +80,8 @@
 		4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Regexer.m"; sourceTree = "<group>"; };
 		4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Regexer.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC18D2F19145C6400CEECEC /* Regexer.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Regexer-Prefix.pch"; sourceTree = "<group>"; };
-		4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Regexer.Mac-Info.plist"; sourceTree = "<group>"; };
+		4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Regexer-Prefix.pch"; path = "Source/Regexer-Prefix.pch"; sourceTree = "<group>"; };
+		4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Regexer.Mac-Info.plist"; path = "Source/Regexer.Mac-Info.plist"; sourceTree = "<group>"; };
 		4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RegexerTests-Info.plist"; sourceTree = "<group>"; };
 		4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexer.h"; sourceTree = "<group>"; };
 		4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexer.m"; sourceTree = "<group>"; };
@@ -191,8 +191,6 @@
 				4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */,
 				4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */,
 				4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */,
-				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
-				4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */,
 				4C4D2DAB191583F300585B57 /* RXCapture.h */,
 				4C4D2DAC191583F300585B57 /* RXCapture.m */,
 				4C4D2DB11915852300585B57 /* RXMatch.h */,
@@ -215,6 +213,8 @@
 		4CC252DA191C158A00E49DF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
+				4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */,
 				4CC252D9191C158600E49DF7 /* README.md */,
 				4CC252D8191C157B00E49DF7 /* Regexer.podspec */,
 			);
