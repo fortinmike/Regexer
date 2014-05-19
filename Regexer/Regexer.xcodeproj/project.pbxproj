@@ -76,6 +76,7 @@
 		4C59966C19145A4900EFA82C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4C5BB18219145D24009CB21B /* Regexer.Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regexer.Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5BB19219145D25009CB21B /* Regexer.Mac.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.Mac.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6128DC192AA31F00FD380B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Regexer.h"; sourceTree = "<group>"; };
 		4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Regexer.m"; sourceTree = "<group>"; };
 		4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Regexer.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,9 +214,10 @@
 		4CC252DA191C158A00E49DF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C6128DC192AA31F00FD380B /* CHANGELOG.md */,
+				4CC252D9191C158600E49DF7 /* README.md */,
 				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
 				4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */,
-				4CC252D9191C158600E49DF7 /* README.md */,
 				4CC252D8191C157B00E49DF7 /* Regexer.podspec */,
 			);
 			name = "Supporting Files";
