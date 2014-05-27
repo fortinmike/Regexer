@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 
-cd Regexer
+cd "$1"
 
 pod install
 
-xctool -workspace Regexer.xcworkspace -scheme Regexer.iOS test
-xctool -workspace Regexer.xcworkspace -scheme Regexer.Mac test
+xctool -workspace "$1.xcworkspace" -scheme "$1.iOS" test
+xctool -workspace "$1.xcworkspace" -scheme "$1.Mac" test
