@@ -13,5 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Regexer/Source'
+  s.prefix_header_file = 'Regexer/Source/Regexer-Prefix.pch'
   s.public_header_files = 'Regexer/Source/**/*.h'
 end

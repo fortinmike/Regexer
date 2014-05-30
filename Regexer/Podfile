@@ -1,4 +1,36 @@
-link_with 'Regexer.iOS', 'Regexer.iOS.Tests', 'Regexer.Mac', 'Regexer.Mac.Tests'
+inhibit_all_warnings!
 
-podspec :path => "../Regexer.podspec"
-pod 'Kiwi/XCTest', '~> 2.2.4'
+ios_version = '6.1'
+osx_version = '10.7'
+
+def library_pods
+	podspec :path => '../Regexer.podspec'
+end
+
+def test_pods
+  pod 'Kiwi/XCTest', '~> 2.2.4'
+end
+
+# Library / Framework Targets
+
+target "Regexer.iOS" do
+	platform :ios, ios_version
+	library_pods
+end
+
+target "Regexer.Mac" do
+	platform :osx, osx_version
+	library_pods
+end
+
+# Test Targets
+
+target "Regexer.iOS.Tests" do
+	platform :ios, ios_version
+	test_pods
+end
+
+target "Regexer.Mac.Tests" do
+	platform :osx, osx_version
+	test_pods
+end

@@ -7,43 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C4D2DAD191583F300585B57 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DAB191583F300585B57 /* RXCapture.h */; };
-		4C4D2DAE191583F300585B57 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DAB191583F300585B57 /* RXCapture.h */; };
-		4C4D2DAF191583F300585B57 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DAC191583F300585B57 /* RXCapture.m */; };
-		4C4D2DB0191583F300585B57 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DAC191583F300585B57 /* RXCapture.m */; };
-		4C4D2DB31915852300585B57 /* RXMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DB11915852300585B57 /* RXMatch.h */; };
-		4C4D2DB41915852300585B57 /* RXMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4D2DB11915852300585B57 /* RXMatch.h */; };
-		4C4D2DB51915852300585B57 /* RXMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DB21915852300585B57 /* RXMatch.m */; };
-		4C4D2DB61915852300585B57 /* RXMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D2DB21915852300585B57 /* RXMatch.m */; };
+		44714F26008B4BF1BFF45050 /* libPods-Regexer.iOS.Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5982F2B4839549A98C81960B /* libPods-Regexer.iOS.Tests.a */; };
+		4C1FDE3B193613D700ACA448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE3A193613D700ACA448 /* Foundation.framework */; };
+		4C1FDE48193613D800ACA448 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
+		4C1FDE49193613D800ACA448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE3A193613D700ACA448 /* Foundation.framework */; };
+		4C38666D19361EBE00BF98B6 /* libRegexer.iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE39193613D700ACA448 /* libRegexer.iOS.a */; };
 		4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
 		4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
 		4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4C9C724E1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */; };
-		4C9C724F1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */; };
-		4C9C72501916A76500C4BFA8 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */; };
-		4C9C72511916A76500C4BFA8 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */; };
-		4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
-		4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59965719145A4900EFA82C /* Cocoa.framework */; };
-		4CC18D4719145C9B00CEECEC /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
-		4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */; };
-		4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */; };
-		4CECFCF119145E4B0022AA2A /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */; };
-		4CECFCF219145E4D0022AA2A /* NSString+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */; };
+		4C5BB19719145D25009CB21B /* Regexer.Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5BB18219145D24009CB21B /* Regexer.Mac.framework */; };
+		4CA7F0141938206700900ED5 /* NSArray+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7F00A1938206700900ED5 /* NSArray+Regexer.h */; };
+		4CA7F0151938206700900ED5 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F00B1938206700900ED5 /* NSArray+Regexer.m */; };
+		4CA7F0161938206700900ED5 /* NSArray+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F00B1938206700900ED5 /* NSArray+Regexer.m */; };
+		4CA7F0171938206700900ED5 /* NSString+Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7F00C1938206700900ED5 /* NSString+Regexer.h */; };
+		4CA7F0181938206700900ED5 /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F00D1938206700900ED5 /* NSString+Regexer.m */; };
+		4CA7F0191938206700900ED5 /* NSString+Regexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F00D1938206700900ED5 /* NSString+Regexer.m */; };
+		4CA7F01A1938206700900ED5 /* RXCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7F00E1938206700900ED5 /* RXCapture.h */; };
+		4CA7F01B1938206700900ED5 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F00F1938206700900ED5 /* RXCapture.m */; };
+		4CA7F01C1938206700900ED5 /* RXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F00F1938206700900ED5 /* RXCapture.m */; };
+		4CA7F01D1938206700900ED5 /* RXMatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7F0101938206700900ED5 /* RXMatch.h */; };
+		4CA7F01E1938206700900ED5 /* RXMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F0111938206700900ED5 /* RXMatch.m */; };
+		4CA7F01F1938206700900ED5 /* RXMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F0111938206700900ED5 /* RXMatch.m */; };
+		4CA7F0201938206700900ED5 /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7F0121938206700900ED5 /* RXRegexCache.h */; };
+		4CA7F0211938206700900ED5 /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F0131938206700900ED5 /* RXRegexCache.m */; };
+		4CA7F0221938206700900ED5 /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F0131938206700900ED5 /* RXRegexCache.m */; };
+		4CA7F0241938207800900ED5 /* Regexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA7F0231938207800900ED5 /* Regexer.h */; };
+		4CA7F026193820B500900ED5 /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F025193820B500900ED5 /* NSString+RegexerSpec.m */; };
+		4CA7F027193820B500900ED5 /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F025193820B500900ED5 /* NSString+RegexerSpec.m */; };
 		4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
-		4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CECFCFD1914644A0022AA2A /* RXRegexCache.h */; };
-		4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CECFCFD1914644A0022AA2A /* RXRegexCache.h */; };
-		4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFCFE1914644A0022AA2A /* RXRegexCache.m */; };
-		4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFCFE1914644A0022AA2A /* RXRegexCache.m */; };
-		4CECFD04191492AD0022AA2A /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */; };
-		4CECFD05191492AD0022AA2A /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */; };
-		813EB67B366A40CBBC3BCFE7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		D5BF7AB6409B408292A34395 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		D6EEE78AE5DB447381705EFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
-		D772B63247D74B3784DD2732 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F08C97F96A34A0F8AE9D657 /* libPods.a */; };
+		A69C48A7B9D1465C8FA3FECD /* libPods-Regexer.Mac.Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAFBBF9E04145C7BFD9B526 /* libPods-Regexer.Mac.Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C1FDE4C193613D800ACA448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C59964B19145A4900EFA82C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C1FDE38193613D700ACA448;
+			remoteInfo = Regexer.iOS;
+		};
 		4C5BB19519145D25009CB21B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4C59964B19145A4900EFA82C /* Project object */;
@@ -51,24 +53,28 @@
 			remoteGlobalIDString = 4C5BB18119145D24009CB21B;
 			remoteInfo = Regexer.Mac;
 		};
-		4CC18D3219145C6400CEECEC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4C59964B19145A4900EFA82C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CC18D2219145C6400CEECEC;
-			remoteInfo = Regexer.iOS;
-		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C1FDE37193613D700ACA448 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		152907A66FE54CC48B1858A3 /* libPods-Regexer.Mac.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.Mac.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		34562BCD3F0946B19C8D054D /* libPods-Regexer.iOS.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.iOS.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		38990A9BF186483784019B54 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		3F08C97F96A34A0F8AE9D657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C4D2DAB191583F300585B57 /* RXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCapture.h; sourceTree = "<group>"; };
-		4C4D2DAC191583F300585B57 /* RXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCapture.m; sourceTree = "<group>"; };
-		4C4D2DB11915852300585B57 /* RXMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMatch.h; sourceTree = "<group>"; };
-		4C4D2DB21915852300585B57 /* RXMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMatch.m; sourceTree = "<group>"; };
+		474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.Tests.xcconfig"; path = "Pods/Pods-Regexer.iOS.Tests.xcconfig"; sourceTree = "<group>"; };
+		4C1FDE39193613D700ACA448 /* libRegexer.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRegexer.iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1FDE3A193613D700ACA448 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C1FDE47193613D800ACA448 /* Regexer.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1FDE4A193613D800ACA448 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C1FDE661936162700ACA448 /* Regexer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Regexer-Info.plist"; path = "Source/Regexer-Info.plist"; sourceTree = "<group>"; };
 		4C59965719145A4900EFA82C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4C59965A19145A4900EFA82C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C59965B19145A4900EFA82C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -76,32 +82,55 @@
 		4C59966C19145A4900EFA82C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4C5BB18219145D24009CB21B /* Regexer.Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Regexer.Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C5BB19219145D25009CB21B /* Regexer.Mac.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.Mac.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6128DC192AA31F00FD380B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
-		4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Regexer.h"; sourceTree = "<group>"; };
-		4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Regexer.m"; sourceTree = "<group>"; };
-		4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = Regexer.iOS.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CC18D2F19145C6400CEECEC /* Regexer.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C6128DE192AA53A00FD380B /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
+		4CA7F00A1938206700900ED5 /* NSArray+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Regexer.h"; sourceTree = "<group>"; };
+		4CA7F00B1938206700900ED5 /* NSArray+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Regexer.m"; sourceTree = "<group>"; };
+		4CA7F00C1938206700900ED5 /* NSString+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexer.h"; sourceTree = "<group>"; };
+		4CA7F00D1938206700900ED5 /* NSString+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexer.m"; sourceTree = "<group>"; };
+		4CA7F00E1938206700900ED5 /* RXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXCapture.h; sourceTree = "<group>"; };
+		4CA7F00F1938206700900ED5 /* RXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXCapture.m; sourceTree = "<group>"; };
+		4CA7F0101938206700900ED5 /* RXMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMatch.h; sourceTree = "<group>"; };
+		4CA7F0111938206700900ED5 /* RXMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMatch.m; sourceTree = "<group>"; };
+		4CA7F0121938206700900ED5 /* RXRegexCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRegexCache.h; sourceTree = "<group>"; };
+		4CA7F0131938206700900ED5 /* RXRegexCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRegexCache.m; sourceTree = "<group>"; };
+		4CA7F0231938207800900ED5 /* Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Regexer.h; sourceTree = "<group>"; };
+		4CA7F025193820B500900ED5 /* NSString+RegexerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexerSpec.m"; sourceTree = "<group>"; };
 		4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Regexer-Prefix.pch"; path = "Source/Regexer-Prefix.pch"; sourceTree = "<group>"; };
-		4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Regexer.Mac-Info.plist"; path = "Source/Regexer.Mac-Info.plist"; sourceTree = "<group>"; };
-		4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RegexerTests-Info.plist"; sourceTree = "<group>"; };
-		4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexer.h"; sourceTree = "<group>"; };
-		4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexer.m"; sourceTree = "<group>"; };
-		4CC252D8191C157B00E49DF7 /* Regexer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = Regexer.podspec; path = /Users/Michael/Projects/Software/Xcode/Pods/Regexer/Regexer.podspec; sourceTree = "<absolute>"; };
-		4CC252D9191C158600E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		4CECFCFD1914644A0022AA2A /* RXRegexCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXRegexCache.h; sourceTree = "<group>"; };
-		4CECFCFE1914644A0022AA2A /* RXRegexCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXRegexCache.m; sourceTree = "<group>"; };
-		4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexerSpec.m"; sourceTree = "<group>"; };
-		7127DE6A178E4DCE9A41904E /* Pods-Regexer.iOS.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.Tests.xcconfig"; path = "Pods/Pods-Regexer.iOS.Tests.xcconfig"; sourceTree = "<group>"; };
-		A3B0439014C045479A6ADE27 /* Pods-Regexer.Mac.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.Tests.xcconfig"; path = "Pods/Pods-Regexer.Mac.Tests.xcconfig"; sourceTree = "<group>"; };
+		4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "RegexerTests-Info.plist"; path = "Tests/RegexerTests-Info.plist"; sourceTree = "<group>"; };
+		4CC252DC191C1E7300E49DF7 /* Regexer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; name = Regexer.podspec; path = ../Regexer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4CC252DD191C1E7300E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5982F2B4839549A98C81960B /* libPods-Regexer.iOS.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.iOS.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68214E7B330146CF89371C6D /* libPods-Regexer.Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFAFBBF9E04145C7BFD9B526 /* libPods-Regexer.Mac.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.Mac.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.Tests.xcconfig"; path = "Pods/Pods-Regexer.Mac.Tests.xcconfig"; sourceTree = "<group>"; };
+		EFBEEB8F4DED45ACB66C909A /* libPods-Regexer.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C1FDE36193613D700ACA448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1FDE3B193613D700ACA448 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1FDE44193613D700ACA448 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C38666D19361EBE00BF98B6 /* libRegexer.iOS.a in Frameworks */,
+				4C1FDE48193613D800ACA448 /* XCTest.framework in Frameworks */,
+				4C1FDE49193613D800ACA448 /* Foundation.framework in Frameworks */,
+				44714F26008B4BF1BFF45050 /* libPods-Regexer.iOS.Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C5BB17E19145D24009CB21B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */,
-				D772B63247D74B3784DD2732 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,28 +138,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C5BB19719145D25009CB21B /* Regexer.Mac.framework in Frameworks */,
 				4C5BB19419145D25009CB21B /* Cocoa.framework in Frameworks */,
 				4C5BB19319145D25009CB21B /* XCTest.framework in Frameworks */,
-				D5BF7AB6409B408292A34395 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2019145C6400CEECEC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC18D2419145C6400CEECEC /* Cocoa.framework in Frameworks */,
-				813EB67B366A40CBBC3BCFE7 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2C19145C6400CEECEC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC18D3119145C6400CEECEC /* Cocoa.framework in Frameworks */,
-				4CC18D3019145C6400CEECEC /* XCTest.framework in Frameworks */,
-				D6EEE78AE5DB447381705EFD /* libPods.a in Frameworks */,
+				A69C48A7B9D1465C8FA3FECD /* libPods-Regexer.Mac.Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,20 +155,19 @@
 				4CC18D4919145CA300CEECEC /* Tests */,
 				4C59965619145A4900EFA82C /* Frameworks */,
 				4C59965519145A4900EFA82C /* Products */,
-				4CC252DA191C158A00E49DF7 /* Supporting Files */,
-				38990A9BF186483784019B54 /* Pods.xcconfig */,
-				A3B0439014C045479A6ADE27 /* Pods-Regexer.Mac.Tests.xcconfig */,
-				7127DE6A178E4DCE9A41904E /* Pods-Regexer.iOS.Tests.xcconfig */,
+				4CC252DB191C1E5D00E49DF7 /* Supporting Files */,
+				E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */,
+				474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		4C59965519145A4900EFA82C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */,
-				4CC18D2F19145C6400CEECEC /* Regexer.iOS.Tests.xctest */,
 				4C5BB18219145D24009CB21B /* Regexer.Mac.framework */,
 				4C5BB19219145D25009CB21B /* Regexer.Mac.Tests.xctest */,
+				4C1FDE39193613D700ACA448 /* libRegexer.iOS.a */,
+				4C1FDE47193613D800ACA448 /* Regexer.iOS.Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,10 +177,14 @@
 			children = (
 				4C59965719145A4900EFA82C /* Cocoa.framework */,
 				4C59966C19145A4900EFA82C /* XCTest.framework */,
+				4C1FDE3A193613D700ACA448 /* Foundation.framework */,
+				4C1FDE4A193613D800ACA448 /* UIKit.framework */,
 				4C59965919145A4900EFA82C /* Other Frameworks */,
 				3F08C97F96A34A0F8AE9D657 /* libPods.a */,
-				152907A66FE54CC48B1858A3 /* libPods-Regexer.Mac.Tests.a */,
-				34562BCD3F0946B19C8D054D /* libPods-Regexer.iOS.Tests.a */,
+				68214E7B330146CF89371C6D /* libPods-Regexer.Mac.a */,
+				CFAFBBF9E04145C7BFD9B526 /* libPods-Regexer.Mac.Tests.a */,
+				EFBEEB8F4DED45ACB66C909A /* libPods-Regexer.iOS.a */,
+				5982F2B4839549A98C81960B /* libPods-Regexer.iOS.Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,16 +202,17 @@
 		4CC18D4319145C9B00CEECEC /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4C9C724C1916A76500C4BFA8 /* NSArray+Regexer.h */,
-				4C9C724D1916A76500C4BFA8 /* NSArray+Regexer.m */,
-				4CC18D4D19145CC200CEECEC /* NSString+Regexer.h */,
-				4CC18D4E19145CC200CEECEC /* NSString+Regexer.m */,
-				4C4D2DAB191583F300585B57 /* RXCapture.h */,
-				4C4D2DAC191583F300585B57 /* RXCapture.m */,
-				4C4D2DB11915852300585B57 /* RXMatch.h */,
-				4C4D2DB21915852300585B57 /* RXMatch.m */,
-				4CECFCFD1914644A0022AA2A /* RXRegexCache.h */,
-				4CECFCFE1914644A0022AA2A /* RXRegexCache.m */,
+				4CA7F0231938207800900ED5 /* Regexer.h */,
+				4CA7F00A1938206700900ED5 /* NSArray+Regexer.h */,
+				4CA7F00B1938206700900ED5 /* NSArray+Regexer.m */,
+				4CA7F00C1938206700900ED5 /* NSString+Regexer.h */,
+				4CA7F00D1938206700900ED5 /* NSString+Regexer.m */,
+				4CA7F00E1938206700900ED5 /* RXCapture.h */,
+				4CA7F00F1938206700900ED5 /* RXCapture.m */,
+				4CA7F0101938206700900ED5 /* RXMatch.h */,
+				4CA7F0111938206700900ED5 /* RXMatch.m */,
+				4CA7F0121938206700900ED5 /* RXRegexCache.h */,
+				4CA7F0131938206700900ED5 /* RXRegexCache.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -205,20 +220,20 @@
 		4CC18D4919145CA300CEECEC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */,
-				4CECFD03191492AD0022AA2A /* NSString+RegexerSpec.m */,
+				4CA7F025193820B500900ED5 /* NSString+RegexerSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		4CC252DA191C158A00E49DF7 /* Supporting Files */ = {
+		4CC252DB191C1E5D00E49DF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C6128DC192AA31F00FD380B /* CHANGELOG.md */,
-				4CC252D9191C158600E49DF7 /* README.md */,
+				4C6128DE192AA53A00FD380B /* CHANGELOG.md */,
+				4C1FDE661936162700ACA448 /* Regexer-Info.plist */,
 				4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */,
-				4CC18D4519145C9B00CEECEC /* Regexer.Mac-Info.plist */,
-				4CC252D8191C157B00E49DF7 /* Regexer.podspec */,
+				4CC252DC191C1E7300E49DF7 /* Regexer.podspec */,
+				4CC18D4A19145CA300CEECEC /* RegexerTests-Info.plist */,
+				4CC252DD191C1E7300E49DF7 /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,41 +245,64 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA7F0141938206700900ED5 /* NSArray+Regexer.h in Headers */,
+				4CA7F0201938206700900ED5 /* RXRegexCache.h in Headers */,
+				4CA7F0171938206700900ED5 /* NSString+Regexer.h in Headers */,
 				4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */,
-				4CECFD001914644A0022AA2A /* RXRegexCache.h in Headers */,
-				4C4D2DB41915852300585B57 /* RXMatch.h in Headers */,
-				4CECFCF219145E4D0022AA2A /* NSString+Regexer.h in Headers */,
-				4C9C724F1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */,
-				4C4D2DAE191583F300585B57 /* RXCapture.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2119145C6400CEECEC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CC18D4719145C9B00CEECEC /* Regexer-Prefix.pch in Headers */,
-				4CECFCFF1914644A0022AA2A /* RXRegexCache.h in Headers */,
-				4C4D2DB31915852300585B57 /* RXMatch.h in Headers */,
-				4CC18D5019145CC200CEECEC /* NSString+Regexer.h in Headers */,
-				4C9C724E1916A76500C4BFA8 /* NSArray+Regexer.h in Headers */,
-				4C4D2DAD191583F300585B57 /* RXCapture.h in Headers */,
+				4CA7F01D1938206700900ED5 /* RXMatch.h in Headers */,
+				4CA7F0241938207800900ED5 /* Regexer.h in Headers */,
+				4CA7F01A1938206700900ED5 /* RXCapture.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4C1FDE38193613D700ACA448 /* Regexer.iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1FDE57193613D800ACA448 /* Build configuration list for PBXNativeTarget "Regexer.iOS" */;
+			buildPhases = (
+				4C1FDE35193613D700ACA448 /* Sources */,
+				4C1FDE36193613D700ACA448 /* Frameworks */,
+				4C1FDE37193613D700ACA448 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Regexer.iOS;
+			productName = Regexer.iOS;
+			productReference = 4C1FDE39193613D700ACA448 /* libRegexer.iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4C1FDE46193613D700ACA448 /* Regexer.iOS.Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1FDE5A193613D800ACA448 /* Build configuration list for PBXNativeTarget "Regexer.iOS.Tests" */;
+			buildPhases = (
+				55DF878425DC41CE838EE8C7 /* Check Pods Manifest.lock */,
+				4C1FDE43193613D700ACA448 /* Sources */,
+				4C1FDE44193613D700ACA448 /* Frameworks */,
+				4C1FDE45193613D700ACA448 /* Resources */,
+				86F140BB095749768462DE17 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C1FDE4D193613D800ACA448 /* PBXTargetDependency */,
+			);
+			name = Regexer.iOS.Tests;
+			productName = Regexer.iOSTests;
+			productReference = 4C1FDE47193613D800ACA448 /* Regexer.iOS.Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4C5BB18119145D24009CB21B /* Regexer.Mac */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C5BB1A019145D25009CB21B /* Build configuration list for PBXNativeTarget "Regexer.Mac" */;
 			buildPhases = (
-				71FA79F29733470DB6D3AE77 /* Check Pods Manifest.lock */,
 				4C5BB17D19145D24009CB21B /* Sources */,
 				4C5BB17E19145D24009CB21B /* Frameworks */,
 				4C5BB17F19145D24009CB21B /* Headers */,
 				4C5BB18019145D24009CB21B /* Resources */,
-				C5B7FCFDC2AE487487D37E9B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,11 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C5BB1A319145D25009CB21B /* Build configuration list for PBXNativeTarget "Regexer.Mac.Tests" */;
 			buildPhases = (
-				B8F8C71AE25042B8B08FF5C2 /* Check Pods Manifest.lock */,
+				0B05272A365447AE9E1143A7 /* Check Pods Manifest.lock */,
 				4C5BB18E19145D25009CB21B /* Sources */,
 				4C5BB18F19145D25009CB21B /* Frameworks */,
 				4C5BB19019145D25009CB21B /* Resources */,
-				A96DF2805EA5499CB3C764B6 /* Copy Pods Resources */,
+				4881B73DADD349C7AC548D2D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,45 +333,6 @@
 			productReference = 4C5BB19219145D25009CB21B /* Regexer.Mac.Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4CC18D2219145C6400CEECEC /* Regexer.iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CC18D3D19145C6400CEECEC /* Build configuration list for PBXNativeTarget "Regexer.iOS" */;
-			buildPhases = (
-				60C4EB64EB564EC69CEC3BA0 /* Check Pods Manifest.lock */,
-				4CC18D1F19145C6400CEECEC /* Sources */,
-				4CC18D2019145C6400CEECEC /* Frameworks */,
-				4CC18D2119145C6400CEECEC /* Headers */,
-				D8216D43B1C44D53BDA68B0D /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Regexer.iOS;
-			productName = Regexer.iOS;
-			productReference = 4CC18D2319145C6400CEECEC /* Regexer.iOS.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
-		4CC18D2E19145C6400CEECEC /* Regexer.iOS.Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4CC18D4019145C6400CEECEC /* Build configuration list for PBXNativeTarget "Regexer.iOS.Tests" */;
-			buildPhases = (
-				2831C023833445B6945D7BE8 /* Check Pods Manifest.lock */,
-				4CC18D2B19145C6400CEECEC /* Sources */,
-				4CC18D2C19145C6400CEECEC /* Frameworks */,
-				4CC18D2D19145C6400CEECEC /* Resources */,
-				7A6F756BB7B944A1B8680F7E /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4CC18D3319145C6400CEECEC /* PBXTargetDependency */,
-			);
-			name = Regexer.iOS.Tests;
-			productName = Regexer.iOSTests;
-			productReference = 4CC18D2F19145C6400CEECEC /* Regexer.iOS.Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -343,11 +342,11 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Michaël Fortin";
 				TargetAttributes = {
-					4C5BB19119145D25009CB21B = {
-						TestTargetID = 4CC18D2219145C6400CEECEC;
+					4C1FDE46193613D700ACA448 = {
+						TestTargetID = 4C5BB18119145D24009CB21B;
 					};
-					4CC18D2E19145C6400CEECEC = {
-						TestTargetID = 4CC18D2219145C6400CEECEC;
+					4C5BB19119145D25009CB21B = {
+						TestTargetID = 4C5BB18119145D24009CB21B;
 					};
 				};
 			};
@@ -363,8 +362,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4CC18D2219145C6400CEECEC /* Regexer.iOS */,
-				4CC18D2E19145C6400CEECEC /* Regexer.iOS.Tests */,
+				4C1FDE38193613D700ACA448 /* Regexer.iOS */,
+				4C1FDE46193613D700ACA448 /* Regexer.iOS.Tests */,
 				4C5BB18119145D24009CB21B /* Regexer.Mac */,
 				4C5BB19119145D25009CB21B /* Regexer.Mac.Tests */,
 			);
@@ -372,6 +371,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C1FDE45193613D700ACA448 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C5BB18019145D24009CB21B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,17 +392,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CC18D2D19145C6400CEECEC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2831C023833445B6945D7BE8 /* Check Pods Manifest.lock */ = {
+		0B05272A365447AE9E1143A7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,7 +410,22 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		60C4EB64EB564EC69CEC3BA0 /* Check Pods Manifest.lock */ = {
+		4881B73DADD349C7AC548D2D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Regexer.Mac.Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55DF878425DC41CE838EE8C7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,22 +440,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		71FA79F29733470DB6D3AE77 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7A6F756BB7B944A1B8680F7E /* Copy Pods Resources */ = {
+		86F140BB095749768462DE17 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,81 +452,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A96DF2805EA5499CB3C764B6 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8F8C71AE25042B8B08FF5C2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C5B7FCFDC2AE487487D37E9B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D8216D43B1C44D53BDA68B0D /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-Regexer.iOS.Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C1FDE35193613D700ACA448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CA7F0211938206700900ED5 /* RXRegexCache.m in Sources */,
+				4CA7F01B1938206700900ED5 /* RXCapture.m in Sources */,
+				4CA7F0181938206700900ED5 /* NSString+Regexer.m in Sources */,
+				4CA7F0151938206700900ED5 /* NSArray+Regexer.m in Sources */,
+				4CA7F01E1938206700900ED5 /* RXMatch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C1FDE43193613D700ACA448 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CA7F026193820B500900ED5 /* NSString+RegexerSpec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C5BB17D19145D24009CB21B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C4D2DB0191583F300585B57 /* RXCapture.m in Sources */,
-				4C9C72511916A76500C4BFA8 /* NSArray+Regexer.m in Sources */,
-				4CECFD021914644A0022AA2A /* RXRegexCache.m in Sources */,
-				4C4D2DB61915852300585B57 /* RXMatch.m in Sources */,
-				4CECFCF119145E4B0022AA2A /* NSString+Regexer.m in Sources */,
+				4CA7F0221938206700900ED5 /* RXRegexCache.m in Sources */,
+				4CA7F01C1938206700900ED5 /* RXCapture.m in Sources */,
+				4CA7F0191938206700900ED5 /* NSString+Regexer.m in Sources */,
+				4CA7F0161938206700900ED5 /* NSArray+Regexer.m in Sources */,
+				4CA7F01F1938206700900ED5 /* RXMatch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,46 +494,98 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CECFD05191492AD0022AA2A /* NSString+RegexerSpec.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D1F19145C6400CEECEC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4C4D2DAF191583F300585B57 /* RXCapture.m in Sources */,
-				4C9C72501916A76500C4BFA8 /* NSArray+Regexer.m in Sources */,
-				4CECFD011914644A0022AA2A /* RXRegexCache.m in Sources */,
-				4C4D2DB51915852300585B57 /* RXMatch.m in Sources */,
-				4CC18D5219145CC200CEECEC /* NSString+Regexer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4CC18D2B19145C6400CEECEC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4CECFD04191492AD0022AA2A /* NSString+RegexerSpec.m in Sources */,
+				4CA7F027193820B500900ED5 /* NSString+RegexerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C1FDE4D193613D800ACA448 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C1FDE38193613D700ACA448 /* Regexer.iOS */;
+			targetProxy = 4C1FDE4C193613D800ACA448 /* PBXContainerItemProxy */;
+		};
 		4C5BB19619145D25009CB21B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4C5BB18119145D24009CB21B /* Regexer.Mac */;
 			targetProxy = 4C5BB19519145D25009CB21B /* PBXContainerItemProxy */;
 		};
-		4CC18D3319145C6400CEECEC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4CC18D2219145C6400CEECEC /* Regexer.iOS */;
-			targetProxy = 4CC18D3219145C6400CEECEC /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4C1FDE58193613D800ACA448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Regexer_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Regexer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Source/Regexer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4C1FDE59193613D800ACA448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/Regexer_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Source/Regexer-Prefix.pch";
+				INFOPLIST_FILE = "Source/Regexer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C1FDE5B193613D800ACA448 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/RegexerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4C1FDE5C193613D800ACA448 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "Tests/RegexerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		4C59967A19145A4900EFA82C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -609,9 +620,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wno-undeclared-selector";
 			};
 			name = Debug;
 		};
@@ -642,14 +654,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				WARNING_CFLAGS = "-Wno-undeclared-selector";
 			};
 			name = Release;
 		};
 		4C5BB1A119145D25009CB21B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -661,7 +673,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Source/Regexer.Mac-Info.plist";
+				INFOPLIST_FILE = "Source/Regexer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -669,7 +681,6 @@
 		};
 		4C5BB1A219145D25009CB21B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -677,7 +688,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Source/Regexer-Prefix.pch";
-				INFOPLIST_FILE = "Source/Regexer.Mac-Info.plist";
+				INFOPLIST_FILE = "Source/Regexer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -685,9 +696,9 @@
 		};
 		4C5BB1A419145D25009CB21B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
+			baseConfigurationReference = E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.iOS.dylib";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.Mac.framework/Versions/A/Regexer.Mac";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -707,77 +718,9 @@
 		};
 		4C5BB1A519145D25009CB21B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
+			baseConfigurationReference = E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.iOS.dylib";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				INFOPLIST_FILE = "Tests/RegexerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		4CC18D3E19145C6400CEECEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Regexer-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		4CC18D3F19145C6400CEECEC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Source/Regexer-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		4CC18D4119145C6400CEECEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.iOS.dylib";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Tests/RegexerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		4CC18D4219145C6400CEECEC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38990A9BF186483784019B54 /* Pods.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.iOS.dylib";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.Mac.framework/Versions/A/Regexer.Mac";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -794,6 +737,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C1FDE57193613D800ACA448 /* Build configuration list for PBXNativeTarget "Regexer.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1FDE58193613D800ACA448 /* Debug */,
+				4C1FDE59193613D800ACA448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C1FDE5A193613D800ACA448 /* Build configuration list for PBXNativeTarget "Regexer.iOS.Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1FDE5B193613D800ACA448 /* Debug */,
+				4C1FDE5C193613D800ACA448 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4C59964E19145A4900EFA82C /* Build configuration list for PBXProject "Regexer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -817,24 +778,6 @@
 			buildConfigurations = (
 				4C5BB1A419145D25009CB21B /* Debug */,
 				4C5BB1A519145D25009CB21B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CC18D3D19145C6400CEECEC /* Build configuration list for PBXNativeTarget "Regexer.iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CC18D3E19145C6400CEECEC /* Debug */,
-				4CC18D3F19145C6400CEECEC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4CC18D4019145C6400CEECEC /* Build configuration list for PBXNativeTarget "Regexer.iOS.Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CC18D4119145C6400CEECEC /* Debug */,
-				4CC18D4219145C6400CEECEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
