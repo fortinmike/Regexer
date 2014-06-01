@@ -1,5 +1,6 @@
 # Regexer
 
+[![Build Status](https://travis-ci.org/fortinmike/Regexer.svg?branch=master)](https://travis-ci.org/fortinmike/Regexer)
 [![Coverage Status](https://coveralls.io/repos/fortinmike/Regexer/badge.png?branch=master)](https://coveralls.io/r/fortinmike/Regexer?branch=master)
 [![Version](http://cocoapod-badges.herokuapp.com/v/Regexer/badge.png)](http://cocoadocs.org/docsets/Regexer)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/Regexer/badge.png)](http://cocoadocs.org/docsets/Regexer)
