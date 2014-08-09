@@ -33,6 +33,8 @@
 - (NSArray *)rx_rangesForMatchesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 - (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern;
 - (NSArray *)rx_matchesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
+- (RXMatch *)rx_firstMatchWithPattern:(NSString *)regexPattern;
+- (RXMatch *)rx_firstMatchWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options;
 
 #pragma mark Capturing Groups
 

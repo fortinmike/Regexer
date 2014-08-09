@@ -102,29 +102,22 @@ static RXRegexCache *_regexCache;
 	
 	NSMutableArray *matches = [NSMutableArray array];
 	for (NSTextCheckingResult *textCheckingResult in results)
-	{
-		NSInteger numberOfRanges = [textCheckingResult numberOfRanges];
-		
-		NSMutableArray *captures = [NSMutableArray array];
-		for (int rangeIndex = 0; rangeIndex < numberOfRanges; rangeIndex++)
-		{
-			NSRange range = [textCheckingResult rangeAtIndex:rangeIndex];
-			if (range.location == NSNotFound)
-			{
-				[captures addObject:[RXCapture notFoundCapture]];
-				continue;
-			}
-			
-			NSString *text = [self substringWithRange:range];
-			RXCapture *capture = [[RXCapture alloc] initWithRange:range text:text];
-			
-			[captures addObject:capture];
-		}
-		
-		[matches addObject:[[RXMatch alloc] initWithCaptures:[captures copy]]];
-	}
+		[matches addObject:[self matchFromResult:textCheckingResult]];
 	
 	return matches;
+}
+
+- (RXMatch *)rx_firstMatchWithPattern:(NSString *)regexPattern
+{
+	return [self rx_firstMatchWithPattern:regexPattern options:0];
+}
+
+- (RXMatch *)rx_firstMatchWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
+{
+	NSRegularExpression *regex = [_regexCache regexForPattern:regexPattern options:options];
+	NSTextCheckingResult *result = [regex firstMatchInString:self options:0 range:NSMakeRange(0, [self length])];
+	
+	return (result ? [self matchFromResult:result] : nil);
 }
 
 #pragma mark Capturing Groups
@@ -182,7 +175,30 @@ static RXRegexCache *_regexCache;
 	return [[regexPattern rx_regex] stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:templateString];
 }
 
-#pragma mark Private Helpers
+#pragma mark Private Methods
+
+- (RXMatch *)matchFromResult:(NSTextCheckingResult *)result
+{
+	NSInteger numberOfRanges = [result numberOfRanges];
+	
+	NSMutableArray *captures = [NSMutableArray array];
+	for (int rangeIndex = 0; rangeIndex < numberOfRanges; rangeIndex++)
+	{
+		NSRange range = [result rangeAtIndex:rangeIndex];
+		if (range.location == NSNotFound)
+		{
+			[captures addObject:[RXCapture notFoundCapture]];
+			continue;
+		}
+		
+		NSString *text = [self substringWithRange:range];
+		RXCapture *capture = [[RXCapture alloc] initWithRange:range text:text];
+		
+		[captures addObject:capture];
+	}
+	
+	return [[RXMatch alloc] initWithCaptures:[captures copy]];
+}
 
 - (void)validateGroup:(NSUInteger)group inMatches:(NSArray *)matches
 {
