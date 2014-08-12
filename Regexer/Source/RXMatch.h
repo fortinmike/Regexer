@@ -18,6 +18,10 @@
 
 - (id)initWithCaptures:(NSArray *)captures;
 
+#pragma mark Templating
+
+- (NSString *)stringByApplyingTemplate:(NSString *)templateString;
+
 #pragma mark Subscripting Support
 
 - (id)objectAtIndexedSubscript:(NSUInteger)index;

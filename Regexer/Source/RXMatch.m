@@ -7,6 +7,7 @@
 //
 
 #import "RXMatch.h"
+#import "NSString+Regexer.h"
 
 @implementation RXMatch
 
@@ -20,6 +21,32 @@
 		_captures = captures ?: [NSArray array];
 	}
 	return self;
+}
+
+#pragma mark Templating
+
+- (NSString *)stringByApplyingTemplate:(NSString *)templateString
+{
+	NSMutableString *altered = [templateString mutableCopy];
+	
+	while (YES)
+	{
+		RXMatch *match = [altered rx_firstMatchWithPattern:@"\\$(\\d)"];
+		if (!match) break;
+		
+		NSUInteger groupNumber = [[match[1] text] integerValue];
+		
+		if (groupNumber >= [_captures count])
+		{
+			NSString *reason = [NSString stringWithFormat:@"There is no capture for group $%d in this match", groupNumber];
+			@throw [NSException exceptionWithName:@"Invalid Operation" reason:reason userInfo:nil];
+		}
+		
+		NSString *captureText = [_captures[groupNumber] text];
+		[altered replaceCharactersInRange:match.range withString:captureText];
+	}
+	
+	return altered;
 }
 
 #pragma mark Accessor Overrides
