@@ -151,7 +151,7 @@ static RXRegexCache *_regexCache;
 
 - (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
-	NSArray *matches = [self rx_matchesWithPattern:regexPattern];
+	NSArray *matches = [self rx_matchesWithPattern:regexPattern options:options];
 	
 	[self validateGroup:group inMatches:matches];
 	
