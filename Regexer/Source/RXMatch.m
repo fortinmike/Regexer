@@ -13,12 +13,12 @@
 
 #pragma mark Lifetime
 
-- (id)initWithCaptures:(NSArray *)captures
+- (instancetype)initWithCaptures:(NSArray *)captures
 {
 	self = [super init];
 	if (self)
 	{
-		_captures = captures ?: [NSArray array];
+		_captures = captures ?: @[];
 	}
 	return self;
 }
@@ -34,9 +34,9 @@
 		RXMatch *match = [altered rx_firstMatchWithPattern:@"\\$(\\d)"];
 		if (!match) break;
 		
-		NSUInteger groupNumber = [[match[1] text] integerValue];
+		NSUInteger groupNumber = [match[1] text].integerValue;
 		
-		if (groupNumber >= [_captures count])
+		if (groupNumber >= _captures.count)
 		{
 			NSString *reason = [NSString stringWithFormat:@"There is no capture for group $%lu in this match", (unsigned long)groupNumber];
 			@throw [NSException exceptionWithName:@"Invalid Operation" reason:reason userInfo:nil];
@@ -53,19 +53,19 @@
 
 - (NSString *)text
 {
-	return [[_captures firstObject] text];
+	return [_captures.firstObject text];
 }
 
 - (NSRange)range
 {
-	return [[_captures firstObject] range];
+	return [_captures.firstObject range];
 }
 
 #pragma mark Subscripting Support
 
 - (id)objectAtIndexedSubscript:(NSUInteger)index
 {
-	if (index >= [_captures count])
+	if (index >= _captures.count)
 	{
 		NSString *reason = [NSString stringWithFormat:@"There is no capture group with index %lu", (unsigned long)index];
 		@throw [NSException exceptionWithName:@"Invalid Operation" reason:reason userInfo:nil];
@@ -78,14 +78,14 @@
 
 - (NSString *)description
 {
-	return [_captures description];
+	return _captures.description;
 }
 
 #pragma mark Debugging
 
 - (id)debugQuickLookObject
 {
-	return [self description];
+	return self.description;
 }
 
 @end

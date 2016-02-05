@@ -16,6 +16,6 @@
 
 + (instancetype)notFoundCapture;
 
-- (id)initWithRange:(NSRange)range text:(NSString *)text;
+- (instancetype)initWithRange:(NSRange)range text:(NSString *)text /*NS_DESIGNATED_INITIALIZER*/;
 
 @end

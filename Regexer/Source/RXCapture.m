@@ -23,7 +23,7 @@
 	return capture;
 }
 
-- (id)initWithRange:(NSRange)range text:(NSString *)text
+- (instancetype)initWithRange:(NSRange)range text:(NSString *)text
 {
 	self = [super init];
 	if (self)
@@ -48,7 +48,7 @@
 
 - (id)debugQuickLookObject
 {
-	return [self description];
+	return self.description;
 }
 
 @end
