@@ -28,7 +28,7 @@
     self = [super init];
     if (self)
     {
-        _cache = [NSMutableDictionary dictionary];
+        _cache = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
