@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ECFA15AF0E267008F4AC9FD /* libPods-Regexer.iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBEEB8F4DED45ACB66C909A /* libPods-Regexer.iOS.a */; };
 		44714F26008B4BF1BFF45050 /* libPods-Regexer.iOS.Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5982F2B4839549A98C81960B /* libPods-Regexer.iOS.Tests.a */; };
 		4C1FDE3B193613D700ACA448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1FDE3A193613D700ACA448 /* Foundation.framework */; };
 		4C1FDE48193613D800ACA448 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C59966C19145A4900EFA82C /* XCTest.framework */; };
@@ -36,6 +37,7 @@
 		4CA7F027193820B500900ED5 /* NSString+RegexerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA7F025193820B500900ED5 /* NSString+RegexerSpec.m */; };
 		4CECFCF319145E540022AA2A /* Regexer-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4CC18D4419145C9B00CEECEC /* Regexer-Prefix.pch */; };
 		A69C48A7B9D1465C8FA3FECD /* libPods-Regexer.Mac.Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFAFBBF9E04145C7BFD9B526 /* libPods-Regexer.Mac.Tests.a */; };
+		B97EC3F73CC4587ED5A2899D /* libPods-Regexer.Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68214E7B330146CF89371C6D /* libPods-Regexer.Mac.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +70,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C53EBF753CC3ED2B2275A9A /* Pods-Regexer.Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.Mac/Pods-Regexer.Mac.debug.xcconfig"; sourceTree = "<group>"; };
+		114C1A1B8C8F7D0B65491466 /* Pods-Regexer.iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.iOS/Pods-Regexer.iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2347B457F7A0B575FF98B27D /* Pods-Regexer.iOS.Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.iOS.Tests/Pods-Regexer.iOS.Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3F08C97F96A34A0F8AE9D657 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.Tests.xcconfig"; path = "Pods/Pods-Regexer.iOS.Tests.xcconfig"; sourceTree = "<group>"; };
+		4B155C0A6AC745D61D12B918 /* Pods-Regexer.iOS.Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.iOS.Tests/Pods-Regexer.iOS.Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1FDE39193613D700ACA448 /* libRegexer.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRegexer.iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1FDE3A193613D700ACA448 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C1FDE47193613D800ACA448 /* Regexer.iOS.Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Regexer.iOS.Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,9 +105,12 @@
 		4CC252DC191C1E7300E49DF7 /* Regexer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; lineEnding = 0; name = Regexer.podspec; path = ../Regexer.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4CC252DD191C1E7300E49DF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5982F2B4839549A98C81960B /* libPods-Regexer.iOS.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.iOS.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		624D4E238E2B4335DCD353A5 /* Pods-Regexer.Mac.Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.Mac.Tests/Pods-Regexer.Mac.Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		66EC910D35977F54B66F1412 /* Pods-Regexer.Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.Mac/Pods-Regexer.Mac.release.xcconfig"; sourceTree = "<group>"; };
 		68214E7B330146CF89371C6D /* libPods-Regexer.Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78F70C0DEB535286AE69A83F /* Pods-Regexer.Mac.Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.Mac.Tests/Pods-Regexer.Mac.Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A5765C0EC8CD35AED697F694 /* Pods-Regexer.iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Regexer.iOS/Pods-Regexer.iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CFAFBBF9E04145C7BFD9B526 /* libPods-Regexer.Mac.Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.Mac.Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Regexer.Mac.Tests.xcconfig"; path = "Pods/Pods-Regexer.Mac.Tests.xcconfig"; sourceTree = "<group>"; };
 		EFBEEB8F4DED45ACB66C909A /* libPods-Regexer.iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Regexer.iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1FDE3B193613D700ACA448 /* Foundation.framework in Frameworks */,
+				1ECFA15AF0E267008F4AC9FD /* libPods-Regexer.iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5BB18319145D25009CB21B /* Cocoa.framework in Frameworks */,
+				B97EC3F73CC4587ED5A2899D /* libPods-Regexer.Mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +166,7 @@
 				4C59965619145A4900EFA82C /* Frameworks */,
 				4C59965519145A4900EFA82C /* Products */,
 				4CC252DB191C1E5D00E49DF7 /* Supporting Files */,
-				E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */,
-				474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */,
+				8606324C17C07ED9A66B92EF /* Pods */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 1;
@@ -239,6 +248,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8606324C17C07ED9A66B92EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C53EBF753CC3ED2B2275A9A /* Pods-Regexer.Mac.debug.xcconfig */,
+				66EC910D35977F54B66F1412 /* Pods-Regexer.Mac.release.xcconfig */,
+				624D4E238E2B4335DCD353A5 /* Pods-Regexer.Mac.Tests.debug.xcconfig */,
+				78F70C0DEB535286AE69A83F /* Pods-Regexer.Mac.Tests.release.xcconfig */,
+				114C1A1B8C8F7D0B65491466 /* Pods-Regexer.iOS.debug.xcconfig */,
+				A5765C0EC8CD35AED697F694 /* Pods-Regexer.iOS.release.xcconfig */,
+				4B155C0A6AC745D61D12B918 /* Pods-Regexer.iOS.Tests.debug.xcconfig */,
+				2347B457F7A0B575FF98B27D /* Pods-Regexer.iOS.Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -263,9 +287,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C1FDE57193613D800ACA448 /* Build configuration list for PBXNativeTarget "Regexer.iOS" */;
 			buildPhases = (
+				35F294D18F36CD8367B866FA /* Check Pods Manifest.lock */,
 				4C1FDE35193613D700ACA448 /* Sources */,
 				4C1FDE36193613D700ACA448 /* Frameworks */,
 				4C1FDE37193613D700ACA448 /* CopyFiles */,
+				E00BED883E040999A0AC00B1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,6 +311,7 @@
 				4C1FDE44193613D700ACA448 /* Frameworks */,
 				4C1FDE45193613D700ACA448 /* Resources */,
 				86F140BB095749768462DE17 /* Copy Pods Resources */,
+				4A8DF8C0CF2F98C9337468E6 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,10 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C5BB1A019145D25009CB21B /* Build configuration list for PBXNativeTarget "Regexer.Mac" */;
 			buildPhases = (
+				306A8E49DA3C13499DE56B34 /* Check Pods Manifest.lock */,
 				4C5BB17D19145D24009CB21B /* Sources */,
 				4C5BB17E19145D24009CB21B /* Frameworks */,
 				4C5BB17F19145D24009CB21B /* Headers */,
 				4C5BB18019145D24009CB21B /* Resources */,
+				16F119A15179346642A20929 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +352,7 @@
 				4C5BB18F19145D25009CB21B /* Frameworks */,
 				4C5BB19019145D25009CB21B /* Resources */,
 				4881B73DADD349C7AC548D2D /* Copy Pods Resources */,
+				8901B18ED241EB77CD8FB19F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +441,51 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		16F119A15179346642A20929 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Regexer.Mac/Pods-Regexer.Mac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		306A8E49DA3C13499DE56B34 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35F294D18F36CD8367B866FA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		4881B73DADD349C7AC548D2D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,7 +498,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Regexer.Mac.Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Regexer.Mac.Tests/Pods-Regexer.Mac.Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A8DF8C0CF2F98C9337468E6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Regexer.iOS.Tests/Pods-Regexer.iOS.Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		55DF878425DC41CE838EE8C7 /* Check Pods Manifest.lock */ = {
@@ -453,7 +543,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Regexer.iOS.Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Regexer.iOS.Tests/Pods-Regexer.iOS.Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8901B18ED241EB77CD8FB19F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Regexer.Mac.Tests/Pods-Regexer.Mac.Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E00BED883E040999A0AC00B1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Regexer.iOS/Pods-Regexer.iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -517,6 +637,7 @@
 /* Begin XCBuildConfiguration section */
 		4C1FDE58193613D800ACA448 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 114C1A1B8C8F7D0B65491466 /* Pods-Regexer.iOS.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Regexer_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -534,6 +655,7 @@
 		};
 		4C1FDE59193613D800ACA448 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5765C0EC8CD35AED697F694 /* Pods-Regexer.iOS.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Regexer_iOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -548,7 +670,7 @@
 		};
 		4C1FDE5B193613D800ACA448 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */;
+			baseConfigurationReference = 4B155C0A6AC745D61D12B918 /* Pods-Regexer.iOS.Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -570,7 +692,7 @@
 		};
 		4C1FDE5C193613D800ACA448 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 474FDAF8DA24494FBAD7FE5C /* Pods-Regexer.iOS.Tests.xcconfig */;
+			baseConfigurationReference = 2347B457F7A0B575FF98B27D /* Pods-Regexer.iOS.Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -663,6 +785,7 @@
 		};
 		4C5BB1A119145D25009CB21B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C53EBF753CC3ED2B2275A9A /* Pods-Regexer.Mac.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -682,6 +805,7 @@
 		};
 		4C5BB1A219145D25009CB21B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66EC910D35977F54B66F1412 /* Pods-Regexer.Mac.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -697,7 +821,7 @@
 		};
 		4C5BB1A419145D25009CB21B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */;
+			baseConfigurationReference = 624D4E238E2B4335DCD353A5 /* Pods-Regexer.Mac.Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.Mac.framework/Versions/A/Regexer.Mac";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -719,7 +843,7 @@
 		};
 		4C5BB1A519145D25009CB21B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8B56363960B4BBBB97DACE8 /* Pods-Regexer.Mac.Tests.xcconfig */;
+			baseConfigurationReference = 78F70C0DEB535286AE69A83F /* Pods-Regexer.Mac.Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Regexer.Mac.framework/Versions/A/Regexer.Mac";
 				COMBINE_HIDPI_IMAGES = YES;
