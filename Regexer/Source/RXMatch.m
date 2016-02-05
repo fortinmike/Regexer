@@ -38,7 +38,7 @@
 		
 		if (groupNumber >= [_captures count])
 		{
-			NSString *reason = [NSString stringWithFormat:@"There is no capture for group $%d in this match", groupNumber];
+			NSString *reason = [NSString stringWithFormat:@"There is no capture for group $%lu in this match", (unsigned long)groupNumber];
 			@throw [NSException exceptionWithName:@"Invalid Operation" reason:reason userInfo:nil];
 		}
 		
