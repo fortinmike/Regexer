@@ -23,12 +23,12 @@
 	return instance;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self)
     {
-        _cache = [NSMutableDictionary dictionary];
+        _cache = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -49,7 +49,7 @@
 			
 			if (error)
 			{
-				NSString *reason = [NSString stringWithFormat:@"Could not create regex with pattern %@ and options %lu. Error: %@", pattern, (unsigned long)options, [error localizedDescription]];
+				NSString *reason = [NSString stringWithFormat:@"Could not create regex with pattern %@ and options %lu. Error: %@", pattern, (unsigned long)options, error.localizedDescription];
 				@throw [NSException exceptionWithName:@"Can't Create Regex" reason:reason userInfo:nil];
 			}
 			
@@ -73,7 +73,7 @@
 - (NSString *)keyForPattern:(NSString *)pattern options:(NSRegularExpressionOptions)options
 {
 	// A super-simple way to create a unique key for the regex:
-	return [pattern stringByAppendingString:[@(options) stringValue]];
+	return [pattern stringByAppendingString:(@(options)).stringValue];
 }
 
 @end

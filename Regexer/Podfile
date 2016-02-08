@@ -8,7 +8,7 @@ def library_pods
 end
 
 def test_pods
-  pod 'Kiwi/XCTest', '~> 2.2.4'
+  pod 'Kiwi', '~> 2.4.0'
 end
 
 # Library / Framework Targets

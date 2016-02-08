@@ -53,7 +53,7 @@ static RXRegexCache *_regexCache;
 
 - (BOOL)rx_matchesRegex:(NSRegularExpression *)regex
 {
-	return ([regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])] > 0);
+	return ([regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, self.length)] > 0);
 }
 
 #pragma mark Matches
@@ -66,7 +66,7 @@ static RXRegexCache *_regexCache;
 - (NSUInteger)rx_numberOfMatchesWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
 	NSRegularExpression *regex = [regexPattern rx_regexWithOptions:options];
-	return [regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, [self length])];
+	return [regex numberOfMatchesInString:self options:0 range:NSMakeRange(0, self.length)];
 }
 
 - (NSArray *)rx_textsForMatchesWithPattern:(NSString *)regexPattern
@@ -98,7 +98,7 @@ static RXRegexCache *_regexCache;
 {
 	NSRegularExpression *regex = [_regexCache regexForPattern:regexPattern options:options];
 	
-	NSArray *results = [regex matchesInString:self options:0 range:NSMakeRange(0, [self length])];
+	NSArray *results = [regex matchesInString:self options:0 range:NSMakeRange(0, self.length)];
 	
 	NSMutableArray *matches = [NSMutableArray array];
 	for (NSTextCheckingResult *textCheckingResult in results)
@@ -115,7 +115,7 @@ static RXRegexCache *_regexCache;
 - (RXMatch *)rx_firstMatchWithPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
 	NSRegularExpression *regex = [_regexCache regexForPattern:regexPattern options:options];
-	NSTextCheckingResult *result = [regex firstMatchInString:self options:0 range:NSMakeRange(0, [self length])];
+	NSTextCheckingResult *result = [regex firstMatchInString:self options:0 range:NSMakeRange(0, self.length)];
 	
 	return (result ? [self matchFromResult:result] : nil);
 }
@@ -130,7 +130,7 @@ static RXRegexCache *_regexCache;
 - (NSArray *)rx_textsForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
 	NSArray *captures = [self rx_capturesForGroup:group withPattern:regexPattern options:options];
-	return [captures rx_map:^id(RXCapture *capture) { return [capture text]; }];
+	return [captures rx_map:^id(RXCapture *capture) { return capture.text; }];
 }
 
 - (NSArray *)rx_rangesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern
@@ -141,7 +141,7 @@ static RXRegexCache *_regexCache;
 - (NSArray *)rx_rangesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern options:(NSRegularExpressionOptions)options
 {
 	NSArray *captures = [self rx_capturesForGroup:group withPattern:regexPattern options:options];
-	return [captures rx_map:^id(RXCapture *capture) { return [NSValue valueWithRange:[capture range]]; }];
+	return [captures rx_map:^id(RXCapture *capture) { return [NSValue valueWithRange:capture.range]; }];
 }
 
 - (NSArray *)rx_capturesForGroup:(NSInteger)group withPattern:(NSString *)regexPattern
@@ -158,7 +158,7 @@ static RXRegexCache *_regexCache;
 	NSMutableArray *captures = [NSMutableArray array];
 	
 	for (RXMatch *match in matches)
-		[captures addObject:[[match captures] objectAtIndex:group]];
+		[captures addObject:match.captures[group]];
 	
 	return captures;
 }
@@ -172,14 +172,14 @@ static RXRegexCache *_regexCache;
 
 - (NSString *)rx_stringByReplacingMatchesOfPattern:(NSString *)regexPattern withTemplate:(NSString *)templateString options:(NSMatchingOptions)options
 {
-	return [[regexPattern rx_regex] stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, [self length]) withTemplate:templateString];
+	return [[regexPattern rx_regex] stringByReplacingMatchesInString:self options:0 range:NSMakeRange(0, self.length) withTemplate:templateString];
 }
 
 #pragma mark Private Methods
 
 - (RXMatch *)matchFromResult:(NSTextCheckingResult *)result
 {
-	NSInteger numberOfRanges = [result numberOfRanges];
+	NSInteger numberOfRanges = result.numberOfRanges;
 	
 	NSMutableArray *captures = [NSMutableArray array];
 	for (int rangeIndex = 0; rangeIndex < numberOfRanges; rangeIndex++)
@@ -204,10 +204,10 @@ static RXRegexCache *_regexCache;
 {
 	// Make sure the numbered group exists. Since there is always the same
 	// number of captures in each match, we only check the first match.
-	RXMatch *firstMatch = [matches firstObject];
+	RXMatch *firstMatch = matches.firstObject;
 	if (firstMatch)
 	{
-		if (group >= [[firstMatch captures] count])
+		if (group >= firstMatch.captures.count)
 		{
 			@throw [NSException exceptionWithName:@"Invalid Parameter"
 										   reason:@"The given group exceeds the number of capture groups in the regex pattern" userInfo:nil];

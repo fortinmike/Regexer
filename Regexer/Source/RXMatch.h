@@ -16,7 +16,7 @@
 
 #pragma mark Lifetime
 
-- (id)initWithCaptures:(NSArray *)captures;
+- (instancetype)initWithCaptures:(NSArray *)captures /*NS_DESIGNATED_INITIALIZER*/;
 
 #pragma mark Templating
 
