@@ -5,6 +5,7 @@
 language: objective-c
 before_install:
   - export LANG=en_US.UTF-8
+  - rvm use system
   - gem install cocoapods
   - brew update
   - sudo easy_install cpp-coveralls
