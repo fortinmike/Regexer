@@ -5,7 +5,6 @@
 language: objective-c
 before_install:
   - export LANG=en_US.UTF-8
-  - gem install cocoapods --no-rdoc
   - brew update
   - sudo easy_install cpp-coveralls
 script: Scripts/travis-build.sh "Regexer"
