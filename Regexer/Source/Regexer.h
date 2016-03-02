@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Michaël Fortin. All rights reserved.
 //
 
-@pragma once
+#ifndef Regexer_Header_h
+#define Regexer_Header_h
 
 #import "NSString+Regexer.h"
+
+#endif
